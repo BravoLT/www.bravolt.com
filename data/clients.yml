@@ -1,0 +1,24 @@
+enable    : true
+title     : Custom Technology Solutions
+description: >
+  From Java, .Net, Angular JS, to Salesforce, Responive eLearning and more -- let our software engineers and technology consultants develop sound products and deliver high-quality service that helps you reach your organization's goals. Our experienced team has an impressive background in designing, developing, and maintaining software applications and consulting on projects large or small.
+image     : images/about/about-1.jpg
+servicelist:
+  - name    : Software Engineers
+  - name    : Technology Consultants
+  - name    : Project Managers
+  - name    : Instructional Designers
+  - name    : eLearning Developers
+clientLogo:
+  - image   : images/client-logo/amway.png
+  - image   : images/client-logo/baudville.png
+  - image   : images/client-logo/benteler.png
+  - image   : images/client-logo/byrne.png
+  - image   : images/client-logo/cochlear.png
+  - image   : images/client-logo/dematic.png
+  - image   : images/client-logo/hermanmiller.png
+  - image   : images/client-logo/johnsoncontrols.png
+  - image   : images/client-logo/perrigo.png
+  - image   : images/client-logo/priorityadvantage.png
+  - image   : images/client-logo/priorityhealth.png
+  - image   : images/client-logo/spectrumhealth.png

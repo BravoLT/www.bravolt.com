@@ -1,0 +1,25 @@
+enable    : true
+#topTite   : LITTLE MORE BRIEF
+#title     : About Us
+#subtitle  : We're here for high impact!
+tabItem   :
+  - id        : philosophy
+    title     : We Invest in People
+    heading   : We Invest in People
+    content   : >
+      Bravo LT is a technology company founded in 2005 and has maintained a leadership position based on a valuable premise: We invest in people. <br> <br> That focus benefits our clients in a growing industry of specialized professions. <br> <br> We integrate functional expertise and technical capabilities with sound talent management practices to create performance that works. We continue to overcome the growing challenges of organizations by providing IT software development solutions, training and technical writing solutions, and talent management solutions tailored for business acceleration and high impact.
+    image     : images/weinvest.png
+
+  - id        : mission
+    title     : Mission
+    heading   : Our Mission
+    content   : >
+      Our mission is to empower our clients, team, and community to succeed through compassion, professionalism, and the power of technology.
+    image     : images/mission.png
+
+  - id        : vision
+    title     : We Believe
+    heading   : We Believe
+    content   : >
+      We believe in challenging the status quo and doing things differently. We do this through creating authentic partnerships, helping organizations thrive, and investing in people.
+    image     : images/pricing-bg.jpg

@@ -1,0 +1,12 @@
+enable  : true
+item    :
+#  - positionRight : false
+#    image : images/about/about-2.jpg
+#    title : Custom Learning Solutions
+#    description : >
+#      Take your training programs to the next level by utilizing our proven experience in designing and developing e-learning, performance support, blended learning, and technical documentation. Our instructional design team will create the right curriculum for you. // Add Link to Learning Page Here!
+  - positionRight : true
+    image : images/about/about-1.jpg
+    title : Custom Technology Solutions
+    description : >
+      From Java, .Net, Angular JS, to Salesforce, Responive eLearning and more -- let our software engineers and technology consultants develop sound products and deliver high-quality service that helps you reach your organization's goals. Our experienced team has an impressive background in designing, developing, and maintaining software applications and consulting on projects large or small.

@@ -1,0 +1,54 @@
+enable  : true
+topTitle: Project Showcase
+title   : Our Work
+subtitle: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum reiciendis quasi itaque, obcaecati atque sit!
+
+filtermenu :
+  - name      : eLearning
+    category  : elearning
+
+  - name      : Technology
+    category  : technology
+
+  - name      : Salesforce
+    category  : salesforce
+
+  - name      : Project Management
+    category  : projectmanagement
+
+item   :
+  - title : Priority Health
+    image : images/portfolio/portfolio-1.png
+    category  : technology
+
+  - title : Baudville Brands
+    image : images/portfolio/portfolio-2.png
+    category  : technology
+
+  - title : Cochlear
+    image : images/portfolio/portfolio-3.png
+    category  : elearning
+
+  - title : Amway
+    image : images/portfolio/portfolio-4.png
+    category  : elearning
+
+  - title : Spectrum Health
+    image : images/portfolio/portfolio-5.png
+    category  : technology
+
+  - title : Gordon Food Service
+    image : images/portfolio/portfolio-6.png
+    category  : technology
+
+  - title : Priority Health
+    image : images/portfolio/portfolio-7.png
+    category  : salesforce
+
+  - title : Amway
+    image : images/portfolio/portfolio-8.png
+    category  : projectmanagement
+
+  - title : Priority Advantage
+    image : images/portfolio/portfolio-9.png
+    category  : projectmanagement

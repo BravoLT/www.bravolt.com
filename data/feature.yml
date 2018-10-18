@@ -1,0 +1,22 @@
+enable  : true
+item  :
+  - icon  : tf-ion-ios-lightbulb-outline
+    title : Team Members
+    description : >
+      On site, rounding out your team, our talented Software Developers, PMs, BAs, QAs, Scrum Masters, UX/UI Designers, and Technical Writers use their passion and expertise to deliver value and help your projects thrive.
+
+  - icon  : tf-ion-monitor
+    title : Custom Technology Solutions
+    description : >
+      From Salesforce Consulting, to Agile Transformations, to Collaborative Discovery Sessions or eLearning Course Development our consultants come along side you and your teams to achieve lasting results.
+
+  - icon  : tf-ion-ios-people-outline
+    title : In-House Development Team
+    description : >
+      A fast scaling team, when you need it. Our local Software Development team brings the horsepower for managed services, project based work, and micro projects.
+
+#HEY  Why won't this work? -->
+#- image : images/homepageicons/teammembers.png
+#- image : images/homepageicons/softwaredevelopment.png
+#- image : images/homepageicons/inhouseteam.png
+###in the palce of - icon : tf-ion-monitor  ????

@@ -1,0 +1,25 @@
+enable : true
+item    :
+  - quote       : >
+      My team and I have been working with Bravo LT for nearly four years, and they continue to meet or exceed our expectations on each project.
+    clientThumb : images/client-logo/client-1.jpg
+    clientName  : Alissa Weihr
+    clientDesignation: Senior Manager, Talent Development, Cochlear
+
+  - quote       : >
+      I highly recommend Bravo LT; Bravo LT consistently provides the people and the know-how to help Spectrum Health develop technology solutions that work.
+    clientThumb : images/client-logo/client-2.jpg
+    clientName  : Mike Ply
+    clientDesignation: Director, Information Systems, Spectrum Health
+
+  - quote       : >
+      Bravo LT has been a valuable business partner for many years, supporting our flexible learning and development business model by providing instructional design and development for WBT, ILT, VILT, and video on a project basis.
+    clientThumb : images/client-logo/client-3.jpg
+    clientName  : Jeremy Smith
+    clientDesignation: Senior Manager Global Learning Solutions, Herman Miller
+
+  - quote       : >
+       Our daughter had a blast at Raspberry Pi Computer Programming Camp! Thank you for providing the opportunity to introduce her to this fun and creative world.
+    clientThumb : images/client-logo/client-4.jpg
+    clientName  : Christine Lyon
+    clientDesignation: Parent

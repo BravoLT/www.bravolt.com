@@ -1,0 +1,40 @@
+enable    : true
+#topTitle  : Something Here Here
+#title     : Our Service
+#subtitle  : Here for high impact!
+item      :
+  - icon  : tf-ion-monitor
+    title : Technology Solutions
+    list  :
+      - name : Java
+      - name : .NET
+      - name : Angular
+      - name : Project Management
+      - name : Salesforce
+      - name : Responsive eLearning
+      - name : Instructional Design
+      - name : Agile Transformations
+
+  - icon  : tf-ion-ios-lightbulb-outline
+    title : Team Members
+    list  :
+      - name : Software Engineers
+      - name : Project Managers
+      - name : Scrum Masters
+      - name : Quality Assurance (QA) Analysts
+      - name : Business Systems Analysts (BA)
+      - name : Agile Coaches and Trainers
+      - name : Saleseforce Developers
+      - name : Technical Writers
+
+  - icon  : tf-ion-ios-people-outline
+    title : Bravo In-House Team
+    list  :
+      - name : Custom Software Development
+      - name : Backlog Acceleration
+      - name : Full Scale Projects
+      - name : Micro Projects
+      - name : Managed Services
+      - name : eLearning Development
+      - name : Graphic Design
+      - name : UX/UI

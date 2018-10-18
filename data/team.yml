@@ -1,0 +1,121 @@
+enable  : true
+topTitle: MEET THE TEAM
+title   : Talented, hard-working, purpose-driven collaborators
+subtitle: We are a diverse group, with years of experience and deep technical know-how. Our team brings a high level of commitment, integrity and quality to the “shop floor” and it’s our passion to help you win. But that’s only part of the story. We’re also gamers, musicians, athletes, and artists. That’s a little about us but we really want to get to know you! How can we serve and support your next project?
+
+#ORIGINAL CODE FOR FULL TEAM MEMBER PROFILE
+#member  :
+#  - image         : images/team/member1.jpg
+#    name          : Dave Schoutens
+#    designation   : Senior Software Engineer
+#    description   : >
+#      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
+    #facebookURL   : https://www.facebook.com/
+    #twitterURL    : https://twitter.com/
+    #gplusURL      : https://plus.google.com/
+    #dribbbleURL   : https://dribbble.com/
+
+member  :
+  - image         : images/team/dave.jpg
+    name          : Dave Schoutens
+  #  designation   : Senior Software Engineer
+
+  - image         : images/team/tom.jpg
+    name          : Tom McKelvey
+  #  designation   : Vice President
+
+  - image         : images/team/eric.png
+    name          : Eric Fox
+  #  designation   : Advanced Scrum Master & BA
+
+  - image         : images/team/ben.jpg
+    name          : Ben Todd
+  #  designation   : Digital Media Designer
+
+  - image         : images/team/kelly.png
+    name          : Kelly Fraiser
+  #  designation   : Senior Project Manager
+
+  - image         : images/team/alysa.jpg
+    name          : Alysa Passage
+  #  designation   : Business Development, CSM
+
+  - image         : images/team/mike.png
+    name          : Mike Hartung
+  #  designation   : Senior Project Manager
+
+  - image         : images/team/ed.jpg
+    name          : Ed Nausieda
+  #  designation   : President
+
+  - image         : images/team/keli.jpg
+    name          : Keli Alexander
+#    designation   : Salseforce Developer
+
+  - image         : images/team/gary.png
+    name          : Gary Rohs
+#    designation   : QA Lead
+
+  - image         : images/team/brad.jpg
+    name          : Brad Nelson
+#    designation   : HR
+
+  - image         : images/team/matthew.png
+    name          : Matthew Underhill
+#    designation   : Associate Software Developer
+
+  - image         : images/team/matt.png
+    name          : Matt Armand
+  #designation   : Software Developer
+
+  - image         : images/team/yvonne.jpg
+    name          : Yvonne Nausieda
+#    designation   : Senior Software Developer
+
+  - image         : images/team/wayne.png
+    name          : Wayne Schaaf
+    #designation   : Senior Project Manager
+
+  - image         : images/team/steve.jpg
+    name          : Steve Gibson
+    #designation   : Scrum Master
+
+  - image         : images/team/joe.jpg
+    name          : Joe Murray
+    #designation   : Senior Project Manager
+
+  - image         : images/team/kate.png
+    name          : Kate Prior
+    #designation   : Senior Project Manager
+
+  - image         : images/team/roman.png
+    name          : Roman Emshanov
+    #designation   : Senior Project Manager
+
+  - image         : images/team/michael.png
+    name          : Michael Haberlein
+    #designation   : Senior Project Manager
+
+  - image         : images/team/julie.jpg
+    name          : Julie Molnar
+    #designation   : QA
+
+  - image         : images/team/jesse.jpg
+    name          : Jesse Harrison
+    #designation   : Software Developer
+
+  - image         : images/team/joel.jpg
+    name          : Joel Heeren
+    #designation   : BA/Scrum Master
+
+  - image         : images/team/ryan-w.jpg
+    name          : Ryan Wise
+    #designation   : Software Developer
+
+  - image         : images/team/ed-d.jpg
+    name          : Ed DeVries
+    #designation   : Software Developer
+
+  - image         : images/team/josh.jpg
+    name          : Josh Sala
+    #designation   : Software Developer

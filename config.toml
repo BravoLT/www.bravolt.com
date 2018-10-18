@@ -1,0 +1,126 @@
+baseURL = "http://localhost:8080/"
+languageCode = "en-us"
+title = "Bravo LT | Learning & Technology"
+theme = "navigator-hugo"
+
+
+# We Used Themefisher Icon font for Icon, for more details check this github repository - https://github.com/themefisher/themefisher-font
+
+# Site Menus
+[menu]
+    # Navbar Menus
+    [[menu.nav]]
+        name    = "About"
+        url     = "/about"
+        weight  = 2
+    [[menu.nav]]
+        name    = "Services"
+        url     = "/service"
+        weight  = 3
+    #[[menu.nav]]
+        #name    = "Portfolio"
+        #url     = "/Portfolio"
+        #weight  = 4
+    [[menu.nav]]
+        name    = "Careers"
+        url     = "/careers"
+        weight  = 4
+    [[menu.nav]]
+        name    = "Blog"
+        url     = "/blog"
+        weight  = 5
+    [[menu.nav]]
+        name    = "We Care"
+        url     = "/care"
+        weight  = 6
+    [[menu.nav]]
+        name    = "Contact"
+        url     = "/contact"
+        weight  = 7
+
+    # Footer Service Menu
+    [[menu.service]]
+        name    = "Custom Technology Solutions"
+        url     = "/service"
+        weight  = 1
+    [[menu.service]]
+        name    = "Team Members"
+        url     = "/service"
+        weight  = 2
+    [[menu.service]]
+        name    = "In-House Development Team"
+        url     = "/service"
+        weight  = 3
+    [[menu.service]]
+        name    = "Agile Training"
+        url     = "/agile"
+        weight  = 4
+
+    # Footer Quick links Menu
+    [[menu.quicklink]]
+        name    = "About"
+        url     = "/about"
+        weight  = 1
+    [[menu.quicklink]]
+        name    = "Contact"
+        url     = "/contact"
+        weight  = 2
+    [[menu.quicklink]]
+        name    = "Careers"
+        url     = "/careers"
+        weight  = 3
+
+# Site Params
+[params]
+    home = "Home"
+    logo = "images/logo.png"
+    dateFormat = "6 January 2006"
+    footerDescription = "Our mission is to empower our clients, team, and community to succeed through compassion, professionalism, and the power of technology."
+
+    # Hero Area Section
+    [params.hero]
+        enable  = true
+        heading = "Success through collaboration and the power of technology"
+        description = "We're a trusted technology partner of Forbes Top 50 companies. We have a reputation of taking time to truly understand your needs -- ensuring the technology we build and high-quality service we deliver adds value at every turn and aligns with your business goals."
+        button  = true
+        btnText = "Explore How We Can Help"
+        btnURL  = "./service"
+        videoThumb = "images/slider/video-player-thumbs.jpg"
+        videoURL   = "https://youtu.be/gZ0vNGE3_Zo"
+
+    # About 2 Section ALYSA TURN BACK ON IF YOU WANT THIS VISIBLE -- remove #
+    #[params.aboutSm]
+    #    enable  = true
+    #    title   = "We're a trusted technology partner of 'Forbes Top 50' companies"
+    #    description = "We have a reputation of taking time to truly understand your business needs and we ensure the technology we build aligns with your business objectives. Our mission is to empower our clients, team, and community to succeed through compassion, professionalism, and the power of technology."
+
+    # Blog Section On Homepage
+    [params.blog]
+        enable  = true
+        #topTitle= "IN THE KNOW INSIGHTS"
+        title   = "Blog"
+        #subtitle= "IN THE KNOW INSIGHTS"
+
+    # Call to Action Section on About Page
+    [params.cta]
+        enable  = true
+        bg      = "images/call-to-action/call-to-action-bg-2.jpg"
+        title   = "Collaborating for Success"
+        subtitle= "Whether you need a team member to round out your team, custom technology solutions and consulting, <br>or to collaborate with our in-house team, we're here for you."
+        btnText = "Contact Us"
+
+    # Contact Section
+    [params.contact]
+        enable  = true
+        #topTitle= "DROP US A NOTE"
+        #title   = "Contact Us"
+        #subtitle= "We're here to help you succeed through collaboration and the power of technology."
+        address = "660 Cascade West Parkway SE, Ste 70 <br> Grand Rapids, MI 49546"
+        phone   = "(616) 259-7568"
+        instagram = "https://www.instagram.com/bravo_lt"
+        twitter = "https://twitter.com/bravo_lt"
+        linkedin= "https://www.linkedin.com/company/bravo-learning-technologies"
+        facebook= "https://www.facebook.com/BravoLT"
+        github= "https://github.com/bravolt"
+
+        # hrefTargetBlank = true

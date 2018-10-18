@@ -1,0 +1,33 @@
+{{ if .Site.Data.careers.enable }}
+{{ "<!-- Career Section Start -->" | safeHTML }}
+<section class="service-list careers-list section bg-gray"> <!--This "class" formats the list element and margins... it stems from the "service" template-->
+    <div class="container"> <!--This creates the full area that spans the viewscreen-->
+        {{ range .Site.Data.careers.item }}
+                <div class="row mt-50 justify-content-center"> <!--This creates a div the size of the container and centers all content inside "mt" refers to margin-top-->
+                    <div class="col-md-5 col-md-5 col-sm-12 offset-md-1"> <!--This creates the location of one of the content panes in the row. "md" refers to desktops "sm" is for tablets "xs" would be phones-->
+                      <!--CONTINUED: The size is the number.  The styler makes the viewscreen separated into 12 units. so if you put 6 it would be 1/2 the screen 3 would be 1/4 and so on-->
+                      <!--They get larger for smaller screens so that they do not float side by side, so "sm" is customarily 12-->
+                        <div class="content"> <!-- this is just a template thing... dont change this one-->
+                            <h2>{{ .title }}</h2>
+                            <p>
+                                {{ .description }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-sm-12 text-center"> <!--same shtuff as above-->
+                          <div class="block"> <!--makes it that blue color-->
+                              {{ with .icon }}<i class="{{.}}"></i>{{ end }}
+                              {{ with .sideTitle }}<h3>{{.}}</h3>{{ end }} <!--the {{.}} means to grab the value for this at the top of what will be iterated (which in this case is the list)-->
+                              <ul>
+                                  {{ range .list }}
+                                  <li><a  href="{{.linkToImage}}">{{.name}}</a></li> <!--creates the hyperlink-->
+                                  {{ end }}
+                              </ul>
+                          </div>
+                    </div>
+                </div>
+        {{ end }}
+    </div>
+</section>
+{{"<!-- Career section End -->" | safeHTML}}
+{{ end }}

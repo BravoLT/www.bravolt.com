@@ -1,0 +1,32 @@
+{{ if .Site.Data.benefits.enable }}
+{{ "<!-- Jobs Section Start -->" | safeHTML }}
+<section class="service-list section bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="title text-center">
+                    {{ with .Site.Data.benefits.topTitle }}<h4>{{.}}</h4>{{ end }}
+                    {{ with .Site.Data.benefits.title }}<h2>{{.}}</h2><span class="border"></span>{{ end }}
+                    {{ with .Site.Data.benefits.subtitle }}<p>{{.}}</p>{{ end }}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {{ range .Site.Data.benefits.item }}
+            <div class="col-md-4">
+                <div class="block">
+                    {{ with .icon }}<i class="{{.}}"></i>{{ end }}
+                    {{ with .title }}<h3>{{.}}</h3>{{ end }}
+                    <ul>
+                        {{ range .list }}
+                        <li> {{.name}} </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ "<!-- Jobs Section Start -->" | safeHTML }}
+{{ end }}
