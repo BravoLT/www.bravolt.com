@@ -860,6 +860,44 @@ a:focus, a:hover {
   outline: none;
 }
 
+.contact-form input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;  
+}
+
+.contact-form input[type="file"] + label {
+  background: #4ba6dd;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 13px;
+  margin: 0;
+  transition: background .5s;
+}
+
+.contact-form input[type="file"]:focus + label {
+  outline: 1px dotted #000;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+
+.contact-form input[type="file"] + label:hover {
+  background: #408bb9;
+  cursor: pointer;
+}
+
+.contact-form input[type="file"]:focus + label * {
+  pointer-events: none;
+}
+
+.contact-form .resume-name {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 13px;
+}
+
 .contact-details .contact-short-info {
   margin-top: 15px;
 }
@@ -1249,11 +1287,15 @@ a:focus, a:hover {
 }
 
 .service-list.careers-list .block ul li a {
-  color: #ffffff;
+  color: #f9f9f9;
 }
 
 .service-list.careers-list .block ul li a:hover {
   color: #e1e1e1;
+}
+
+.careers-list .block {
+  padding: 15px 30px;
 }
 
 .client-service-list li{
