@@ -16,11 +16,12 @@ module.exports = function sendEmail(subject, body, resumeName, resume) {
             html:  body
         }
 
-        if (resumeName !== null && resume !== null) {
+        if (true) {
             params.attachments = [
                 {
                     filename: resumeName,
-                    resume: resume
+                    content: resume,
+                    encoding: 'base64'
                 }
             ]
         }

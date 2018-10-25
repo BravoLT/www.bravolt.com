@@ -4,7 +4,8 @@ exports.handle = function(event, ctx, callback) {
   console.log('processing event: %j', event)
 
   if (event.subject && event.body) {
-    sendEmail(event.subject, event.body, event.resumeName || null, event.resume || null).then((result) => {
+
+    sendEmail(event.subject, event.body, event.resumeName, event.resume).then((result) => {
       callback(null, result)
     }, callback)
 
