@@ -839,11 +839,11 @@ a:focus, a:hover {
 
 .contact-form input:hover,
 .contact-form textarea:hover,
-.contact-form #contact-submit:hover {
+.contact-form input[type="submit"]:hover {
   border-color: #4ba6dd;
 }
 
-.contact-form #contact-submit {
+.contact-form input[type="submit"] {
   border: none;
   padding: 15px 0;
   width: 100%;
@@ -898,7 +898,7 @@ a:focus, a:hover {
   font-size: 13px;
 }
 
-.contact-form input.error {
+.contact-form input.error, .contact-form textarea.error {
   border-color: #D8000C;
 }
 
@@ -930,7 +930,7 @@ a:focus, a:hover {
   margin: 0;
 }
 
-.error {
+.error:not(input):not(textarea) {
   display: none;
   padding: 10px;
   color: #D8000C;

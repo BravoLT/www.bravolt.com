@@ -1,21 +1,11 @@
-
-
 (function ($) { "use strict";
-
 	/* ========================================================================= */
 	/*	Page Preloader
 	/* ========================================================================= */
 
-	// window.load = function () {
-	// 	document.getElementById('preloader').style.display = 'none';
-	// }
-
 	$(window).on("load",function(){
 		$('#preloader').fadeOut('slow',function(){$(this).remove();});
 	});
-
-
-
 
 	/* ========================================================================= */
 	/*	Portfolio Filtering Hook
@@ -33,7 +23,6 @@
 	if (portfolio_item.length) {
 		var mixer = mixitup(portfolio_item);
 	};
-
 
 	/* ========================================================================= */
 	/*	Testimonial Carousel
@@ -65,7 +54,6 @@
 		  ]
 	});
 
-
 	/* ========================================================================= */
 	/*	Clients Slider Carousel
 	/* =========================================================================  */
@@ -80,9 +68,6 @@
   		slidesToScroll: 1,
 	});
 
-
-
-
 	/* ========================================================================= */
 	/*	Company Slider Carousel
 	/* =========================================================================  */
@@ -95,38 +80,27 @@
   		slidesToScroll: 1,
 	});
 
-
 	/* ========================================================================= */
 	/*	Awars Counter Js
 	/* =========================================================================  */
 	$('.counter').each(function() {
-	  var $this = $(this),
-	      countTo = $this.attr('data-count');
-
-	  $({ countNum: $this.text()}).animate({
-	    countNum: countTo
-	  },
-
-	  {
-
-	    duration: 1500,
-	    easing:'linear',
-	    step: function() {
-	      $this.text(Math.floor(this.countNum));
-	    },
-	    complete: function() {
-	      $this.text(this.countNum);
-	      //alert('finished');
-	    }
-
-	  });
-
-
+		var $this = $(this),
+		countTo = $this.attr('data-count');
+		$({ countNum: $this.text()}).animate({
+			countNum: countTo
+		},
+		{
+			duration: 1500,
+			easing:'linear',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+			}
+		});
 
 	});
-
-
-
 
 	/* ========================================================================= */
 	/*   Contact Form Validating
@@ -146,18 +120,51 @@
 
 		if (error == false) {
 			$('#contact-submit').attr({
-				'disabled': 'false',
+				'disabled': 'true',
 				'value': 'Sending...'
 			});
 
 			var subject = $("#name").val() + ": " + $("#subject").val();
-			var body = $("#message").val() + "\n\n" + "Email back at: " + $("#email").val();
-			aws_send_email(subject, body).then(() => $("#contact-submit").attr({
-				'value': 'Sent!',
-				'disabled': ''
-			}));
+			var body = $("#message").val() + "<br/><br/>" + "Email back at: " + $("#email").val();
+			aws_send_email(subject, body).then(function() {
+				$("#contact-submit").attr({
+					'value': 'Sent!'
+				});
+			});
 		}
 	});
+
+	$("#careers-submit").click(function (e) {
+		e.preventDefault();
+
+		var error = check_for_empty_inputs("#name, #email, #message");
+		var resumeInput	= $("#resumeUpload")[0];	
+		if (resumeInput.files.length === 0 || !resumeInput.files[0]) {
+			error = true;
+			alert("Please attach a resume");
+		}
+
+		if (error == false) {
+			$('#careers-submit').attr({
+				'disabled': 'true',
+				'value': 'Sending...'
+			});
+
+			var subject = "Bravo Careers: " + $("#name").val();
+			var body = $("#message").val() + "<br/><br/>" + "Email back at: " + $("#email").val();
+			var resumeName = resumeInput.files[0].name;
+
+			file_to_base64_string(resumeInput.files[0]).then(function(data) {
+				aws_send_email(subject, body, resumeName, data).then(function() {
+					$("#careers-submit").attr({
+						'value': 'Sent!',
+					});
+				});
+			});
+		}
+	});
+
+	$("#copyrightYear").html(+new Date().getFullYear());
 
 	/* ========================================================================= */
 	/*	On scroll fade/bounce effect
@@ -177,8 +184,6 @@
 	}});
 
 })(jQuery);
-
-
 
 window.marker = null;
 
@@ -241,14 +246,14 @@ if(map.length != 0){
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-function aws_send_email (subject, body) {
+function aws_send_email (subject, body, resumeName, resume) {
 	return fetch('https://fwykqh9xdb.execute-api.us-west-2.amazonaws.com/production/bravolt-send-mail', {
 	  method: 'POST',
 	  headers: {
 		'Accept': 'application/json',
 		'Content-Type': 'application/json'
 	  },
-	  body: JSON.stringify({ subject, body })
+	  body: JSON.stringify({ subject, body, resumeName, resume })
 	})
 }
 
@@ -272,7 +277,7 @@ function file_to_base64_string (file) {
 	return new Promise(function (resolve, reject) {
 		var fr = new FileReader();
 		fr.onload = function() { 
-			resolve(fr.result);
+			resolve(fr.result.split(',')[1]);
 		}
 		fr.onerror = function(error) {
 			alert("Could not read file, try again");

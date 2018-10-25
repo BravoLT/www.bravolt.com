@@ -1,35 +1,22 @@
 (function ($) { "use strict";
-	/* ========================================================================= */
-	/*	Page Preloader
-	/* ========================================================================= */
-
+	//	Page Preloader
 	$(window).on("load",function(){
 		$('#preloader').fadeOut('slow',function(){$(this).remove();});
 	});
 
-	/* ========================================================================= */
-	/*	Portfolio Filtering Hook
-	/* =========================================================================  */
+	//	Portfolio Filtering Hook
 	$('.play-icon i').click(function() {
 		var video = '<iframe allowfullscreen src="' + $(this).attr('data-video') + '"></iframe>';
 		$(this).replaceWith(video);
 	});
 
-	/* ========================================================================= */
-	/*	Portfolio Filtering Hook
-	/* =========================================================================  */
-
+	//	Portfolio Filtering Hook
 	var portfolio_item = $('.portfolio-items-wrapper');
 	if (portfolio_item.length) {
 		var mixer = mixitup(portfolio_item);
 	};
 
-
-	/* ========================================================================= */
-	/*	Testimonial Carousel
-	/* =========================================================================  */
-
-	//Init the slider
+	//	Testimonial Carousel
 	$('.testimonial-slider').slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
@@ -55,12 +42,7 @@
 		  ]
 	});
 
-
-	/* ========================================================================= */
-	/*	Clients Slider Carousel
-	/* =========================================================================  */
-
-	//Init the slider
+	//	Clients Slider Carousel
 	$('.clients-logo-slider').slick({
 		infinite: true,
 		arrows:false,
@@ -70,12 +52,7 @@
   		slidesToScroll: 1,
 	});
 
-
-
-
-	/* ========================================================================= */
-	/*	Company Slider Carousel
-	/* =========================================================================  */
+	//	Company Slider Carousel
 	$('.company-gallery').slick({
 		infinite: true,
 		arrows:false,
@@ -85,10 +62,7 @@
   		slidesToScroll: 1,
 	});
 
-
-	/* ========================================================================= */
-	/*	Awars Counter Js
-	/* =========================================================================  */
+	//	Awars Counter Js
 	$('.counter').each(function() {
 		var $this = $(this),
 		countTo = $this.attr('data-count');
@@ -108,10 +82,7 @@
 
 	});
 
-	/* ========================================================================= */
-	/*   Contact Form Validating
-	/* ========================================================================= */
-
+	// Update filename / accepts field
 	$('#resumeUpload').on('change', function(e) {
 		var fileName = e.target.value.split('\\').pop();
 		if (fileName) {
@@ -119,35 +90,65 @@
 		}
 	});
 
+	// Validate + send email on contact page
 	$('#contact-submit').click(function (e) {
 		e.preventDefault();
 
-		var error = check_for_empty_inputs("#name, #email, #subject, #message");
+		var error = checkForEmptyInput("#name, #email, #subject, #message");
 
 		if (error == false) {
 			$('#contact-submit').attr({
-				'disabled': 'false',
+				'disabled': 'true',
 				'value': 'Sending...'
 			});
 
 			var subject = $("#name").val() + ": " + $("#subject").val();
-			var body = $("#message").val() + "\n\n" + "Email back at: " + $("#email").val();
-			aws_send_email(subject, body).then(() => $("#contact-submit").attr({
-				'value': 'Sent!',
-				'disabled': ''
-			}));
+			var body = $("#message").val() + "<br/><br/>" + "Email back at: " + $("#email").val();
+			awsSendEmail(subject, body).then(function() {
+				$("#contact-submit").attr({
+					'value': 'Sent!'
+				});
+			});
 		}
 	});
 
-	/* ========================================================================= */
-	/*	On scroll fade/bounce effect
-	/* ========================================================================= */
+	// Validate + send email on careers page
+	$("#careers-submit").click(function (e) {
+		e.preventDefault();
+
+		var error = checkForEmptyInput("#name, #email, #message");
+		var resumeInput	= $("#resumeUpload")[0];	
+		if (resumeInput.files.length === 0 || !resumeInput.files[0]) {
+			error = true;
+			alert("Please attach a resume");
+		}
+
+		if (error == false) {
+			$('#careers-submit').attr({
+				'disabled': 'true',
+				'value': 'Sending...'
+			});
+
+			var subject = "Bravo Careers: " + $("#name").val();
+			var body = $("#message").val() + "<br/><br/>" + "Email back at: " + $("#email").val();
+			var resumeName = resumeInput.files[0].name;
+
+			fileToBase64String(resumeInput.files[0]).then(function(data) {
+				awsSendEmail(subject, body, resumeName, data).then(function() {
+					$("#careers-submit").attr({
+						'value': 'Sent!',
+					});
+				});
+			});
+		}
+	});
+
+	$("#copyrightYear").html(+new Date().getFullYear());
+
+	//	On scroll fade/bounce effect
 	var scroll = new SmoothScroll('a[href*="#"]');
 
-	/* ========================================================================= */
-	/*	Header Scroll Background Change
-	/* ========================================================================= */
-
+	//	Header Scroll Background Change
 	$(window).scroll(function() {
 	var scroll = $(window).scrollTop();
 	if (scroll > 200) {
@@ -157,8 +158,6 @@
 	}});
 
 })(jQuery);
-
-
 
 window.marker = null;
 
@@ -221,18 +220,18 @@ if(map.length != 0){
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-function aws_send_email (subject, body, resume) {
+function awsSendEmail (subject, body, resumeName, resume) {
 	return fetch('https://fwykqh9xdb.execute-api.us-west-2.amazonaws.com/production/bravolt-send-mail', {
 	  method: 'POST',
 	  headers: {
 		'Accept': 'application/json',
 		'Content-Type': 'application/json'
 	  },
-	  body: JSON.stringify({ subject, body, resume })
+	  body: JSON.stringify({ subject, body, resumeName, resume })
 	})
 }
 
-function check_for_empty_inputs(queryString) {
+function checkForEmptyInput(queryString) {
 	var inputList = jQuery(queryString);
 	var error = false;
 
@@ -248,11 +247,11 @@ function check_for_empty_inputs(queryString) {
 	return error;
 }
 
-function file_to_base64_string (file) {
+function fileToBase64String (file) {
 	return new Promise(function (resolve, reject) {
 		var fr = new FileReader();
 		fr.onload = function() { 
-			resolve(fr.result);
+			resolve(fr.result.split(',')[1]);
 		}
 		fr.onerror = function(error) {
 			alert("Could not read file, try again");
