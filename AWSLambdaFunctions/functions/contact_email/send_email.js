@@ -10,7 +10,7 @@ const ses = new AWS.SES({ apiVersion: '2010-12-01' });
 module.exports = function sendEmail(subject, body, resumeName, resume) {
     return new Promise((resolve, reject) => {
         const params = {
-            from: process.env.FROM_EMAIL,
+            from: '"' + process.env.FROM_NAME + '" '+ process.env.FROM_EMAIL,
             to: process.env.TO_EMAIL,
             subject: subject,
             html:  body
