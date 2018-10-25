@@ -1,21 +1,11 @@
-
-
 (function ($) { "use strict";
-
 	/* ========================================================================= */
 	/*	Page Preloader
 	/* ========================================================================= */
 
-	// window.load = function () {
-	// 	document.getElementById('preloader').style.display = 'none';
-	// }
-
 	$(window).on("load",function(){
 		$('#preloader').fadeOut('slow',function(){$(this).remove();});
 	});
-
-
-
 
 	/* ========================================================================= */
 	/*	Portfolio Filtering Hook
@@ -100,33 +90,23 @@
 	/*	Awars Counter Js
 	/* =========================================================================  */
 	$('.counter').each(function() {
-	  var $this = $(this),
-	      countTo = $this.attr('data-count');
-
-	  $({ countNum: $this.text()}).animate({
-	    countNum: countTo
-	  },
-
-	  {
-
-	    duration: 1500,
-	    easing:'linear',
-	    step: function() {
-	      $this.text(Math.floor(this.countNum));
-	    },
-	    complete: function() {
-	      $this.text(this.countNum);
-	      //alert('finished');
-	    }
-
-	  });
-
-
+		var $this = $(this),
+		countTo = $this.attr('data-count');
+		$({ countNum: $this.text()}).animate({
+			countNum: countTo
+		},
+		{
+			duration: 1500,
+			easing:'linear',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+			}
+		});
 
 	});
-
-
-
 
 	/* ========================================================================= */
 	/*   Contact Form Validating
@@ -241,14 +221,14 @@ if(map.length != 0){
     google.maps.event.addDomListener(window, 'load', initialize);
 }
 
-function aws_send_email (subject, body) {
+function aws_send_email (subject, body, resume) {
 	return fetch('https://fwykqh9xdb.execute-api.us-west-2.amazonaws.com/production/bravolt-send-mail', {
 	  method: 'POST',
 	  headers: {
 		'Accept': 'application/json',
 		'Content-Type': 'application/json'
 	  },
-	  body: JSON.stringify({ subject, body })
+	  body: JSON.stringify({ subject, body, resume })
 	})
 }
 
