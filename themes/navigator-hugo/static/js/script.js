@@ -20,7 +20,7 @@
 	/* ========================================================================= */
 	/*	Portfolio Filtering Hook
 	/* =========================================================================  */
-$('.play-icon i').click(function() {
+	$('.play-icon i').click(function() {
 		var video = '<iframe allowfullscreen src="' + $(this).attr('data-video') + '"></iframe>';
 		$(this).replaceWith(video);
 	});
@@ -159,24 +159,22 @@ $('.play-icon i').click(function() {
 		}
 	});
 
+	/* ========================================================================= */
+	/*	On scroll fade/bounce effect
+	/* ========================================================================= */
+	var scroll = new SmoothScroll('a[href*="#"]');
 
-/* ========================================================================= */
-/*	On scroll fade/bounce effect
-/* ========================================================================= */
-var scroll = new SmoothScroll('a[href*="#"]');
+	/* ========================================================================= */
+	/*	Header Scroll Background Change
+	/* ========================================================================= */
 
-/* ========================================================================= */
-/*	Header Scroll Background Change
-/* ========================================================================= */
-
-$(window).scroll(function() {
-var scroll = $(window).scrollTop();
-if (scroll > 200) {
-    $(".navigation").addClass("sticky-header");
-} else {
-    $(".navigation").removeClass("sticky-header");
-}});
-
+	$(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+	if (scroll > 200) {
+		$(".navigation").addClass("sticky-header");
+	} else {
+		$(".navigation").removeClass("sticky-header");
+	}});
 
 })(jQuery);
 
@@ -261,9 +259,9 @@ function check_for_empty_inputs(queryString) {
 	for (var i = 0; i < inputList.length; i++) {
 		if (inputList[i].value.length == 0) {
 			error = true;
-			$(inputList[i]).css("border-color", "#D8000C");
+			$(inputList[i]).addClass("error");
 		} else {
-			$(inputList[i]).css("border-color", "#666");
+			$(inputList[i]).removeClass("error");
 		}
 	}
 
@@ -271,12 +269,15 @@ function check_for_empty_inputs(queryString) {
 }
 
 function file_to_base64_string (file) {
-	var fr = new FileReader();
-	fr.readAsDataURL(file);
-	fr.onload = function() { 
-		
-	}
-	fr.onerror = function(error) {
-		
-	}
+	return new Promise(function (resolve, reject) {
+		var fr = new FileReader();
+		fr.onload = function() { 
+			resolve(fr.result);
+		}
+		fr.onerror = function(error) {
+			alert("Could not read file, try again");
+			resolve(null);
+		}
+		fr.readAsDataURL(file);
+	});
 }

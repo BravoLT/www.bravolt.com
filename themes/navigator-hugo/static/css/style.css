@@ -898,6 +898,10 @@ a:focus, a:hover {
   font-size: 13px;
 }
 
+.contact-form input.error {
+  border-color: #D8000C;
+}
+
 .contact-details .contact-short-info {
   margin-top: 15px;
 }
