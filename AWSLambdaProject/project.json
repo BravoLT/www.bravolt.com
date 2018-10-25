@@ -1,0 +1,8 @@
+{
+  "name": "bravo-email-form",
+  "description": "Email function for BravoLT's forms on their static webpage",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::910144801136:role/bravo-email-form_lambda_function",
+  "environment": {}
+}

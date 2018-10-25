@@ -1,0 +1,15 @@
+{
+  "name": "bravo-lambda-mailer",
+  "version": "1.0.0",
+  "description": "mailer for bravolt",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^4.6.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryan Wise",
+  "license": "ISC"
+}

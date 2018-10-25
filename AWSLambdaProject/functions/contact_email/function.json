@@ -1,0 +1,8 @@
+{
+    "environment": {
+        "SES_REGION": "us-west-2",
+        "FROM_NAME": "BravoLT Contact Page",
+        "FROM_EMAIL": "ryan@ryanwise.me",
+        "TO_EMAIL": "ryan@wiseweb-design.com"
+    }
+}
