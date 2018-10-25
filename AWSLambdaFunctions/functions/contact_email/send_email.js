@@ -16,7 +16,7 @@ module.exports = function sendEmail(subject, body, resumeName, resume) {
             html:  body
         }
 
-        if (true) {
+        if (resumeName !== undefined && resume !== undefined) {
             params.attachments = [
                 {
                     filename: resumeName,

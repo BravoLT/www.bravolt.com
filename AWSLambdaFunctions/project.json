@@ -1,8 +1,8 @@
 {
-  "name": "bravo-email-form",
-  "description": "Email function for BravoLT's forms on their static webpage",
+  "name": "bravolt-emailer",
+  "description": "Send contacty and job emails with attachments to correct addresses from a static webpage",
   "memory": 128,
   "timeout": 5,
-  "role": "arn:aws:iam::910144801136:role/bravo-email-form_lambda_function",
+  "role": "arn:aws:iam::198399635915:role/bravolt-emailer_lambda_function",
   "environment": {}
 }

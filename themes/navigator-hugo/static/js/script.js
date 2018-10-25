@@ -222,7 +222,7 @@ if(map.length != 0){
 }
 
 function awsSendEmail (subject, body, resumeName, resume) {
-	return fetch('https://fwykqh9xdb.execute-api.us-west-2.amazonaws.com/production/bravolt-send-mail', {
+	return fetch('https://pv8z3sulxg.execute-api.us-east-2.amazonaws.com/production/sendemail', {
 	  method: 'POST',
 	  headers: {
 		'Accept': 'application/json',
