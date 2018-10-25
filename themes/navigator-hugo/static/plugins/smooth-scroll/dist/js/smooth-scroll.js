@@ -458,7 +458,6 @@
 				// Save or create the ID as a data attribute and remove it (prevents scroll jump)
 				var id = anchor.id ? anchor.id : 'smooth-scroll-top';
 				anchor.setAttribute('data-scroll-id', id);
-				anchor.id = '';
 
 				// If no hash change event will happen, fire manually
 				// Otherwise, update the hash
@@ -478,7 +477,6 @@
 			// If anchored element exists, save the ID as a data attribute and remove it (prevents scroll jump)
 			if (!anchor) return;
 			anchor.setAttribute('data-scroll-id', anchor.id);
-			anchor.id = '';
 
 			// If no hash change event will happen, fire manually
 			if (toggle.hash === window.location.hash) {

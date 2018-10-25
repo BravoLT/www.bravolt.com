@@ -23,7 +23,8 @@
 		infinite: true,
 		arrows:false,
 		autoplay: true,
-  		autoplaySpeed: 2000,
+		autoplaySpeed: 5000, // this is in milliseconds
+		rtl: true,
   		responsive: [
 		    {
 		      breakpoint: 600,

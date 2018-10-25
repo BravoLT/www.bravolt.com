@@ -476,7 +476,7 @@ a:focus, a:hover {
 }
 
 .navigation .navbar-nav > li > a {
-  color: #707d8f;
+  color: #fff;
   font-size: 15px;
   line-height: 26px;
   padding: 20px 15px !important;
@@ -696,6 +696,14 @@ a:focus, a:hover {
   width: 100%;
   position: absolute;
   z-index: -1;
+}
+
+/*=================================================================
+  Global section
+==================================================================*/
+
+.content p {
+  color: #777;
 }
 
 /*=================================================================

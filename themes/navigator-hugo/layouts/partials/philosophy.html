@@ -17,14 +17,14 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="commonTab">
-                    <ul class="nav nav-tabs justify-content-center" id="myTab">
+                    <ul class="nav nav-tabs justify-content-center">
                         {{ range $index, $element := .Site.Data.philosophy.tabItem }}
                         <li class="nav-item">
                             <a class="nav-link {{ if eq $index 0 }}active{{ end }}" id="{{ .id }}-tab" data-toggle="tab" href="#{{.id}}">{{ .title }}</a>
                         </li>
                         {{ end }}
                     </ul>
-                    <div class="tab-content" id="myTabContent">
+                    <div class="tab-content">
                         {{ range $index, $element := .Site.Data.philosophy.tabItem }}
                         <div class="tab-pane fade {{ if eq $index 0 }}show active{{ end }}" id="{{ .id }}">
                             <div class="row">
