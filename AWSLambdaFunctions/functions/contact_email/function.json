@@ -2,7 +2,6 @@
     "environment": {
         "SES_REGION": "us-east-1",
         "FROM_NAME": "BravoLT Contact Page",
-        "FROM_EMAIL": "ryan.wise@bravolt.com",
-        "TO_EMAIL": "ryan.wise@bravolt.com"
+        "FROM_EMAIL": "ryan.wise@bravolt.com"
     }
 }
