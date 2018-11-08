@@ -1,7 +1,7 @@
 enable    : true
 title     : Serving Our Community
 description: >
-  We understand the importance of serving this great community we call home. But to us, that doesn’t mean just paying lip service—we give back by donating our time and resources to causes we believe in. Whether it’s contributing to open-source projects, volunteering at local nonprofit organizations, or providing free educational programs to the public, we like to get our hands dirty.
+  We understand the importance of serving this great Grand Rapids community we call home. But to us, that doesn’t mean just paying lip service—we give back by donating our time and resources to causes we believe in. Whether it’s contributing to open-source projects, volunteering at local nonprofit organizations, or providing free educational programs to the public, we like to get our hands dirty.
 image     : images/care/care.jpg
 servicelist:
   - name    : Raspberry Pi Camp

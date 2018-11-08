@@ -18,7 +18,7 @@
                     {{ with .sideTitle }}<h3>{{.}}</h3>{{ end }} <!--the {{.}} means to grab the value for this at the top of what will be iterated (which in this case is the list)-->
                     <ul>
                         {{ range .list }}
-                            <li><a  href="{{.linkToImage}}">{{.name}}</a></li> <!--creates the hyperlink-->
+                            <li><a target="_blank" href="{{.linkToImage}}">{{.name}}</a></li> <!--creates the hyperlink-->
                         {{ end }}
                     </ul>
                 </div>

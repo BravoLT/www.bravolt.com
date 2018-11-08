@@ -9,8 +9,9 @@
             <div class="col-md-6 align-self-center">
                 {{ with .Site.Data.agile.title }}<h2>{{.}}</h2>{{ end }}
                 {{ with .Site.Data.agile.description }}<p>{{.}}</p>{{ end }}
+                {{ with .Site.Data.agile.training }}<p>{{.}}</p>{{ end }}
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-8">
                         <ul class="color-gray client-service-list">
                             {{ range .Site.Data.agile.servicelist }}
                             <li>

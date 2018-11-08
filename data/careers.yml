@@ -2,7 +2,7 @@ enable  : true
 item    :
   - title : Go Team Bravo! # "-" is the list member. for this item, because we dont want to make many similar items on the page
     description : >
-      Bravo LT needs you to be a part of our highly motivated group of technology experts. We share a passion for technology and the community we serve, and we are committed to building long-lasting, productive relationships. We focus on giving back to the community, positively impacting society, and providing quality solutions that work. We believe in autonomy, mastery and purpose and in trusting people to do the right thing - and we think Bravo LT is a pretty great place to be a part of.
+      Bravo LT needs you to be a part of our highly motivated group of technology experts. We share a passion for technology and the community we serve, and we are committed to building long-lasting, productive relationships. We focus on giving back to the community, positively impacting society, and providing quality solutions that work. We believe in autonomy, mastery purpose and trusting people to do the right thing — and we think Bravo LT is a pretty great place to be a part of.
     icon  : tf-ion-monitor #I think you said you still wanted to change this
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg

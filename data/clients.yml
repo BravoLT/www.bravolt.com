@@ -1,7 +1,7 @@
 enable    : true
 title     : Custom Technology Solutions
 description: >
-  From Java, .Net, Angular JS, to Salesforce, Responive eLearning and more -- let our software engineers and technology consultants develop sound products and deliver high-quality service that helps you reach your organization's goals. Our experienced team has an impressive background in designing, developing, and maintaining software applications and consulting on projects large or small.
+  From Java, .Net, Angular JS, to Salesforce, Responive eLearning and more — let our software engineers and technology consultants develop sound products and deliver high-quality service that helps you reach your organization's goals. Our experienced team has an impressive background in designing, developing, and maintaining software applications and consulting on projects large or small.
 image     : images/about/about-1.jpg
 servicelist:
   - name    : Software Engineers

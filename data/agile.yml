@@ -1,7 +1,9 @@
 enable    : true
 title     : Lean Agile Certification Training
 description: >
-  Equip your teams with the cutting-edge Lean Agile Certification training they need! Our Bronze Agile Partnership allows us to advise our clients on the Scaled Agile Framework to help them reach their business goals more effectively. We’re excited to offer Lean Agile training locally since we’ve seen first hand how applying Agile project management methodologies creates big wins for our clients in various enterprises. Email us about tailor-made Agile training, transformations, or coaching for your organization. Connect with us at agile@bravolt.com.
+  Equip your teams with the cutting-edge Lean Agile Certification training they need! Our Bronze Agile Partnership allows us to advise our clients on the Scaled Agile Framework to help them reach their business goals more effectively. 
+  
+training: We’re excited to offer Lean Agile training locally since we’ve seen first hand how applying Agile project management methodologies creates big wins for our clients in various enterprises. Email us about tailor-made Agile training, transformations, or coaching for your organization at agile@bravolt.com.
 image     : images/agile/agile-training-pic.jpg
 servicelist:
   - name    : Leading Agile
