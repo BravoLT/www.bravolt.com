@@ -2,6 +2,6 @@
     "environment": {
         "SES_REGION": "us-east-1",
         "FROM_NAME": "Bravo LT Contact Page",
-        "FROM_EMAIL": "ryan.wise@bravolt.com"
+        "FROM_EMAIL": "info@bravolt.com"
     }
 }
