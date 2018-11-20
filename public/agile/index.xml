@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agile Training on Bravo LT | Learning &amp; Technology</title>
-    <link>http://www.bravolt.com.s3-website-us-east-1.amazonaws.com/agile/</link>
+    <link>//www.bravolt.com/agile/</link>
     <description>Recent content in Agile Training on Bravo LT | Learning &amp; Technology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 07 Jul 2018 12:37:52 +0600</lastBuildDate>
     
-	<atom:link href="http://www.bravolt.com.s3-website-us-east-1.amazonaws.com/agile/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//www.bravolt.com/agile/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

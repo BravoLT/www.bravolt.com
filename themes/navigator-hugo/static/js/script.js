@@ -228,7 +228,7 @@ function awsSendEmail (subject, body, resumeName, resume) {
 		'Accept': 'application/json',
 		'Content-Type': 'application/json'
 	  },
-	  body: JSON.stringify({ subject, body, resumeName, resume })
+	  body: JSON.stringify({ subject: subject, body: body, resumeName: resumeName, resume: resume })
 	})
 }
 

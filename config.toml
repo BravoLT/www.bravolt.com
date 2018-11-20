@@ -1,5 +1,5 @@
 # For local dev baseURL = "http://localhost:8080/"
-baseURL = "http://www.bravolt.com.s3-website-us-east-1.amazonaws.com"
+baseURL = "//www.bravolt.com"
 languageCode = "en-us"
 title = "Bravo LT | Learning & Technology"
 theme = "navigator-hugo"
