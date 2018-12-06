@@ -13,7 +13,7 @@ item    :
         linkToImage: ../images/jobdescriptions/2-senior-java-developer.pdf
       - name : Java Developer
         linkToImage: ../images/jobdescriptions/3-java-developer.pdf
-      - name : Business Systems Analyst (BA)
+      - name : Business Systems Analyst
         linkToImage: ../images/jobdescriptions/4-business-systems-analyst.pdf
       - name : Quality Assurance (QA) Analyst
         linkToImage: ../images/jobdescriptions/5-quality-assurance-qa-analyst.pdf
@@ -23,3 +23,5 @@ item    :
         linkToImage: ../images/jobdescriptions/7-scrum-master.pdf
       - name : Project Coordinator/Office Assistant
         linkToImage: ../images/jobdescriptions/8-project-coordinator.pdf
+      - name : Salesforce Business Analyst
+        linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
