@@ -50,7 +50,7 @@ member  :
 
   - image         : images/team/matthew.png
     name          : Matthew Underhill
-#    designation   : Associate Software Developer
+#    designation   : Software Developer
 
   - image         : images/team/matt.png
     name          : Matt Armand
@@ -122,10 +122,6 @@ member  :
 
   - image         : images/team/mike.png
     name          : Kate Stiltner
-    #designation   : Software Developer
-
-  - image         : images/team/eric.png
-    name          : Ed DeVries
     #designation   : Software Developer
 
   - image         : images/team/gary.png
