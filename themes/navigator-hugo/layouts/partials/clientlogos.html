@@ -26,7 +26,7 @@
             <div class="col-md-12">
                 <div id="clients-slider" class="clients-logo-slider">
                     {{ range .Site.Data.clients.clientLogo }}
-                    <img src="{{ .image | absURL }}" alt="client-logo">
+                    <div><img class="img-fluid" src="{{ .image | absURL }}" alt="client-logo"></div>
                     {{ end }}
                 </div>
             </div>
