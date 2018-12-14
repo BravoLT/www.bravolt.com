@@ -7,21 +7,21 @@ item    :
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg
     list  :
-      - name : C#/.NET Software Developer #notice each of these starts with "-" because it marks a new member to the list
-        linkToImage: ../images/jobdescriptions/1-c-sharp-dot-net-software-developer.pdf
-      - name : Senior Java Developer
-        linkToImage: ../images/jobdescriptions/2-senior-java-developer.pdf
-      - name : Java Developer
-        linkToImage: ../images/jobdescriptions/3-java-developer.pdf
       - name : Business Systems Analyst
         linkToImage: ../images/jobdescriptions/4-business-systems-analyst.pdf
+      - name : C#/.NET Software Developer #notice each of these starts with "-" because it marks a new member to the list
+        linkToImage: ../images/jobdescriptions/1-c-sharp-dot-net-software-developer.pdf
+      - name : Java Developer
+        linkToImage: ../images/jobdescriptions/3-java-developer.pdf
+      - name : Project Coordinator/Office Assistant
+        linkToImage: ../images/jobdescriptions/8-project-coordinator.pdf
       - name : Quality Assurance (QA) Analyst
         linkToImage: ../images/jobdescriptions/5-quality-assurance-qa-analyst.pdf
+      - name : Salesforce Business Analyst
+        linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
       - name : Salesforce Developer
         linkToImage: ../images/jobdescriptions/6-salesforce-developer.pdf
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/7-scrum-master.pdf
-      - name : Project Coordinator/Office Assistant
-        linkToImage: ../images/jobdescriptions/8-project-coordinator.pdf
-      - name : Salesforce Business Analyst
-        linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
+      - name : Senior Java Developer
+        linkToImage: ../images/jobdescriptions/2-senior-java-developer.pdf
