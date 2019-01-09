@@ -25,3 +25,5 @@ item    :
         linkToImage: ../images/jobdescriptions/8-project-coordinator.pdf
       - name : Salesforce Business Analyst
         linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
+      - name : Software QA Manager
+        linkToImage: ../images/jobdescriptions/10-software-qa-manager.pdf
