@@ -21,7 +21,7 @@ item    :
         linkToImage: ../images/jobdescriptions/6-salesforce-developer.pdf
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/7-scrum-master.pdf
-      - name : Project Coordinator/Office Assistant
-        linkToImage: ../images/jobdescriptions/8-project-coordinator.pdf
       - name : Salesforce Business Analyst
         linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
+      - name : Process Engineer Manager
+        linkToImage: ../images/jobdescriptions/10-process-engineer-manager.pdf

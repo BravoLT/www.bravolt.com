@@ -16,114 +16,122 @@ subtitle: We are a diverse group, with years of experience and deep technical kn
     #dribbbleURL   : https://dribbble.com/
 
 member  :
-  - image         : images/team/dave.jpg
+  - image         : images/team/dave-schoutens.png
     name          : Dave Schoutens
-  #  designation   : Senior Software Engineer
+  #  designation   : Title
 
-  - image         : images/team/eric.png
-    name          : Eric Fox
-  #  designation   : Advanced Scrum Master & BA
-
-  - image         : images/team/ben.jpg
-    name          : Ben Todd
-  #  designation   : Digital Media Designer
-
-  - image         : images/team/alysa.jpg
-    name          : Alysa Passage
-  #  designation   : Business Development, CSM
-
-  - image         : images/team/mike.png
+  - image         : images/team/mike-hartung.png
     name          : Mike Hartung
-  #  designation   : Senior Project Manager
-
-  - image         : images/team/ed.jpg
-    name          : Ed Nausieda
-  #  designation   : President
-
-  - image         : images/team/keli.jpg
-    name          : Keli Alexander
-#    designation   : Salseforce Developer
-
-  - image         : images/team/gary.png
-    name          : Gary Rohs
-#    designation   : QA Lead
-
-  - image         : images/team/matthew.png
-    name          : Matthew Underhill
-#    designation   : Associate Software Developer
-
-  - image         : images/team/matt.png
-    name          : Matt Armand
-  #designation   : Software Developer
-
-  - image         : images/team/yvonne.jpg
-    name          : Yvonne Nausieda
-#    designation   : Senior Software Developer
-
-  - image         : images/team/steve.jpg
-    name          : Steve Gibson
-    #designation   : Scrum Master
+  #  designation   : Title
 
   - image         : images/team/joe.jpg
     name          : Joe Murray
-    #designation   : Senior Project Manager
+  #  designation   : Title
 
-  - image         : images/team/roman.png
-    name          : Roman Emshanov
-    #designation   : Senior Project Manager
+  - image         : images/team/alysa-passage.png
+    name          : Alysa Passage
+  #  designation   : Title
 
-  - image         : images/team/michael.png
-    name          : Michael Haberlein
-    #designation   : Senior Project Manager
+  - image         : images/team/edward-nausieda.png
+    name          : Ed Nausieda
+  #  designation   : Title
 
-  - image         : images/team/julie.jpg
-    name          : Julie Molnar
-    #designation   : QA
+  - image         : images/team/yvonne.jpg
+    name          : Yvonne Nausieda
+  #  designation   : HR Manager
 
-  - image         : images/team/jesse.jpg
-    name          : Jesse Harrison
-    #designation   : Software Developer
-
-  - image         : images/team/joel.jpg
+  - image         : images/team/joel-heeren.png
     name          : Joel Heeren
-    #designation   : BA/Scrum Master
+#    designation   : Title
 
-  - image         : images/team/ryan-w.jpg
-    name          : Ryan Wise
-    #designation   : Software Developer
-
-  - image         : images/team/ed-d.jpg
-    name          : Ed DeVries
-    #designation   : Software Developer
-
-  - image         : images/team/gary.png
-    name          : Sam Berry
-    #designation   : Software Developer
-
-  - image         : images/team/mike.png
-    name          : Sammy Lindsey
-    #designation   : Software Developer
-
-  - image         : images/team/eric.png
+  - image         : images/team/beau-furrow.png
     name          : Beau Furrow
-    #designation   : Software Developer
+#    designation   : Title
 
-  - image         : images/team/gary.png
-    name          : Chad Handrich
-    #designation   : Software Developer
+  - image         : images/team/matthew-underhill.png
+    name          : Matthew Underhill
+#    designation   : Title
 
-  - image         : images/team/eric.png
-    name          : David Kempisty
-    #designation   : Software Developer
+  - image         : images/team/ryan-wise.png
+    name          : Ryan Wise
+  #designation   : Title
 
-  - image         : images/team/gary.png
-    name          : Josh Kovach
-    #designation   : Software Developer
+  - image         : images/team/ellen-spiker.png
+    name          : Ellen Spiker
+#    designation   : Title
 
-  - image         : images/team/mike.png
+  - image         : images/team/matt-armand.png
+    name          : Matt Armand
+    #designation   : Title
+
+  - image         : images/team/gary-rohs.png
+    name          : Gary Rohs
+    #designation   : Title
+
+  - image         : images/team/julie-molnar.png
+    name          : Julie Molnar
+    #designation   : Title
+
+  - image         : images/team/phototemplate4.png
     name          : Kate Stiltner
-    #designation   : Software Developer
+    #designation   : Title
 
-  - image         : images/team/gary.png
+  - image         : images/team/josh-kovach.png
+    name          : Josh Kovach
+    #designation   : Title
+
+  - image         : images/team/jesse-harrison.png
+    name          : Jesse Harrison
+    #designation   : Title
+
+  - image         : images/team/phototemplate9.png
+    name          : Steve Gibson
+    #designation   : Title
+
+  - image         : images/team/michael-haberlein.png
+    name          : Michael Haberlein
+    #designation   : Title
+
+  - image         : images/team/sammy-lindsey.png
+    name          : Sammy Lindsey
+    #designation   : Title
+
+  - image         : images/team/sam-berry.png
+    name          : Sam Berry
+    #designation   : Title
+
+  - image         : images/team/mike-kolarik.png
     name          : Mike Kolarik
-    #designation   : Software Developer
+    #designation   : Title
+
+  - image         : images/team/keli.jpg
+    name          : Keli Alexander
+    #designation   : Title
+
+  - image         : images/team/ed-devries.png
+    name          : Ed Devries
+    #designation   : Title
+
+  - image         : images/team/david-kempisty.png
+    name          : David Kempisty
+    #designation   : Title
+
+  - image         : images/team/phototemplate5.png
+    name          : Alex Gutierrez
+    #designation   : Title
+
+  - image         : images/team/phototemplate10.png
+    name          : Chad Handrich
+    #designation   : Title
+
+  - image         : images/team/jake-coddaire.png
+    name          : Jake Coddaire
+    #designation   : Title
+
+  - image         : images/team/phototemplate2.jpg
+    name          : Eric Fox
+    #designation   : Title
+
+  - image         : images/team/phototemplate8.png
+    name          : Jean Burger
+    #designation   : Title
