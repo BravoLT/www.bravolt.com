@@ -2,13 +2,13 @@ enable : true
 item    :
   - quote       : >
       My team and I have been working with Bravo LT for nearly four years, and they continue to meet or exceed our expectations on each project
-    clientThumb : images/client-logo/client-1.jpg
-    clientName  : Alissa Weihr
+    clientThumb : images/client-logo/alissa-weiher.png
+    clientName  : Alissa Weiher
     clientDesignation: Senior Manager, Talent Development, Cochlear
 
   - quote       : >
       I highly recommend Bravo LT; Bravo LT consistently provides the people and the know-how to help Spectrum Health develop technology solutions that work
-    clientThumb : images/client-logo/client-2.jpg
+    clientThumb : images/client-logo/mike-ply.png
     clientName  : Mike Ply
     clientDesignation: Director, Information Systems, Spectrum Health
 
