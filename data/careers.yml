@@ -9,8 +9,8 @@ item    :
     list  :
       - name: Senior Project Manager
         linkToImage: ../images/jobdescriptions/11-senior-project-manager.pdf
-      - name: .NET Developer
-        linkToImage: ../images/jobdescriptions/12-dot-net-developer.pdf
+      - name: Senior .NET Developer
+        linkToImage: ../images/jobdescriptions/13-senior-dot-net-developer.pdf
       - name : Business Systems Analyst
         linkToImage: ../images/jobdescriptions/4-business-systems-analyst.pdf
       - name : Salesforce Developer
