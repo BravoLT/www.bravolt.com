@@ -324,6 +324,47 @@ a:focus, a:hover {
   }
 }
 
+/* Video Banner */
+video.banner {
+  position: fixed;
+  top: 370px;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  z-index: -10;
+}
+
+.background.banner {
+  position: fixed;
+  top: 370px;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+  z-index: -10;
+  background: url('/images/banner-still.jpg');
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .video.banner { display: none; }
+  .background.banner { display: block }
+}
+
+@media (min-width: 768px) {
+  .video.banner { display: block; }
+  .background.banner { display: none }
+}
+
 .title {
   padding-bottom: 50px;
   text-align: center;
@@ -571,7 +612,11 @@ a:focus, a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #0d1629;
+  background: transparent;
+}
+
+.hero-area .block {
+  text-align: center;
 }
 
 @media (max-width: 480px) {
@@ -695,6 +740,10 @@ a:focus, a:hover {
   width: 100%;
   position: absolute;
   z-index: -1;
+}
+
+.clients.section {
+  background: #fff;
 }
 
 /*=================================================================
