@@ -88,10 +88,6 @@ member  :
     name          : Steve Gibson
     #designation   : Title
 
-  - image         : images/team/michael-haberlein.png
-    name          : Michael Haberlein
-    #designation   : Title
-
   - image         : images/team/sammy-lindsey.png
     name          : Sammy Lindsey
     #designation   : Title
@@ -101,27 +97,15 @@ member  :
     #designation   : Title
 
   - image         : images/team/mike-kolarik.png
-    name          : Mike Kolarik
-    #designation   : Title
-
-  - image         : images/team/keli.jpg
-    name          : Keli Alexander
+    name          : Michael Kolarik
     #designation   : Title
 
   - image         : images/team/ed-devries.png
     name          : Ed Devries
     #designation   : Title
 
-  - image         : images/team/david-kempisty.png
-    name          : David Kempisty
-    #designation   : Title
-
   - image         : images/team/phototemplate5.png
     name          : Alex Gutierrez
-    #designation   : Title
-
-  - image         : images/team/phototemplate10.png
-    name          : Chad Handrich
     #designation   : Title
 
   - image         : images/team/jake-coddaire.png
@@ -130,8 +114,4 @@ member  :
 
   - image         : images/team/phototemplate2.jpg
     name          : Eric Fox
-    #designation   : Title
-
-  - image         : images/team/phototemplate8.png
-    name          : Jean Burger
     #designation   : Title
