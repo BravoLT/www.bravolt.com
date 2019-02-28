@@ -2,23 +2,46 @@
 {{ "<!-- Hero Area -->" | safeHTML }}
 <section class="hero-area">
     <div class="container">
-        <video class="banner hidden-xs" src="images/banner-video.mp4" autoplay loop muted preload >
-        </video>
-        <div class="banner background visible-xs">
+        <div class="mobile">
+            <div class="bg-banner">
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="block">
+                        {{ with .Site.Params.hero.heading }}
+                        <h2>{{ . }}</h2>
+                        {{ end }}
+                        {{ if .Site.Params.hero.button }}
+                        <ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                            <li class="list-inline-item">
+                                <a href="{{ with .Site.Params.hero.btnURL }}{{.}}{{ end }}" target="_self" class="btn btn-main">{{ with .Site.Params.hero.btnText }}{{.}}{{ end }}</a>
+                            </li>
+                        </ul>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div class="block">
-                    {{ with .Site.Params.hero.heading }}
-                    <h2>{{ . }}</h2>
-                    {{ end }}
-                    {{ if .Site.Params.hero.button }}
-                    <ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
-                        <li class="list-inline-item">
-                            <a href="{{ with .Site.Params.hero.btnURL }}{{.}}{{ end }}" target="_self" class="btn btn-main">{{ with .Site.Params.hero.btnText }}{{.}}{{ end }}</a>
-                        </li>
-                    </ul>
-                    {{ end }}
+        
+        <div class ="desktop">
+            <div class="ban-cont">
+                <video class="banner" src="images/banner-video.mp4" autoplay loop muted preload>
+                </video>
+            </div>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="block">
+                        {{ with .Site.Params.hero.heading }}
+                        <h2>{{ . }}</h2>
+                        {{ end }}
+                        {{ if .Site.Params.hero.button }}
+                        <ul class="list-inline wow fadeInUp" data-wow-duration=".5s" data-wow-delay=".7s">
+                            <li class="list-inline-item">
+                                <a href="{{ with .Site.Params.hero.btnURL }}{{.}}{{ end }}" target="_self" class="btn btn-main">{{ with .Site.Params.hero.btnText }}{{.}}{{ end }}</a>
+                            </li>
+                        </ul>
+                        {{ end }}
+                    </div>
                 </div>
             </div>
         </div>

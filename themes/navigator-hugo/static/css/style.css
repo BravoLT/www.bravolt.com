@@ -53,20 +53,20 @@ a:focus, a:hover {
 }
 
 .btn-main, .btn-main-sm {
-  background-color: #21D6BF;
-  background-image: linear-gradient(100deg, #4ba6dd, #1b295c);
-  color: #fff;
+  background-color: #4ba6dd;
   display: inline-block;
+  color: #fff;
   font-size: 14px;
+  font-weight: bold;
   letter-spacing: 1px;
   padding: 10px 40px;
   text-transform: uppercase;
   border: 1px solid transparent;
-  border-radius: 2px;
+  border-radius: 30px;
 }
 
 .btn-main:hover, .btn-main-sm:hover {
-  color: #fff;
+  color: #284658;
 }
 
 .btn-main-sm {
@@ -325,44 +325,44 @@ a:focus, a:hover {
 }
 
 /* Video Banner */
+
+.ban-cont {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
 video.banner {
-  position: fixed;
-  top: 370px;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
+  width: 100%;
   height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
-  background-size: cover;
-  z-index: -10;
+  transform: translateY(-25%)
 }
 
-.background.banner {
-  position: fixed;
-  top: 370px;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  transform: translateX(-50%) translateY(-50%);
+.bg-banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background-image: url('/images/banner-still.jpg');
   background-size: cover;
-  z-index: -10;
-  background: url('/images/banner-still.jpg');
-  background-size: cover;
+  background-position: center;
+  filter: brightness(55%)
 }
 
-@media (max-width: 767px) {
-  .video.banner { display: none; }
-  .background.banner { display: block }
+@media screen and (max-width: 767px) {
+  .desktop { display: none; }
+  .mobile { display: block }
 }
 
-@media (min-width: 768px) {
-  .video.banner { display: block; }
-  .background.banner { display: none }
+@media screen and (min-width: 768px) {
+  .desktop { display: block; }
+  .mobile { display: none }
 }
 
 .title {
@@ -619,9 +619,9 @@ video.banner {
   text-align: center;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 990px) {
   .hero-area {
-    padding: 80px 0;
+    padding: 15px 0;
   }
 }
 
@@ -696,7 +696,7 @@ video.banner {
   font-size: 30px;
   margin-left: 5px;
 }
-===*/
+===
 .hero-area-video {
   height: 100vh;
   position: inherit !important;
@@ -733,6 +733,7 @@ video.banner {
 .hero-area-video .block .btn-main, .hero-area-video .block .btn-main-sm {
   margin-top: 20px;
 }
+*/
 
 .dark-bg {
   background: rgba(0, 0, 0, 0.7);
