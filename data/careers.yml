@@ -7,23 +7,21 @@ item    :
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg
     list  :
-      - name: Senior Project Manager
-        linkToImage: ../images/jobdescriptions/11-senior-project-manager.pdf
-      - name: Senior .NET Developer
-        linkToImage: ../images/jobdescriptions/13-senior-dot-net-developer.pdf
+      - name: Senior Software Developer
+        linkToImage: ../images/jobdescriptions/14-senior-software-developer.pdf
+      - name: Senior Java Developer
+        linkToImage: ../images/jobdescriptions/2-senior-java-developer.pdf
+      - name : Java Developer
+        linkToImage: ../images/jobdescriptions/3-java-developer.pdf
+      - name : Scrum Master
+        linkToImage: ../images/jobdescriptions/7-scrum-master.pdf
       - name : Business Systems Analyst
         linkToImage: ../images/jobdescriptions/4-business-systems-analyst.pdf
+      - name : Senior Project Manager
+        linkToImage: ../images/jobdescriptions/11-senior-project-manager.pdf
+      - name : Quality Assurance (QA) Analyst
+        linkToImage: ../images/jobdescriptions/5-quality-assurance-qa-analyst.pdf
       - name : Salesforce Developer
         linkToImage: ../images/jobdescriptions/6-salesforce-developer.pdf
       - name : Salesforce Business Analyst
         linkToImage: ../images/jobdescriptions/9-salesforce-business-analyst.pdf
-      - name : Quality Assurance (QA) Analyst
-        linkToImage: ../images/jobdescriptions/5-quality-assurance-qa-analyst.pdf
-      - name : Scrum Master
-        linkToImage: ../images/jobdescriptions/7-scrum-master.pdf
-      - name : C#/.NET Software Developer
-        linkToImage: ../images/jobdescriptions/1-c-sharp-dot-net-software-developer.pdf
-      - name : Senior Java Developer
-        linkToImage: ../images/jobdescriptions/2-senior-java-developer.pdf
-      - name : Java Developer
-        linkToImage: ../images/jobdescriptions/3-java-developer.pdf

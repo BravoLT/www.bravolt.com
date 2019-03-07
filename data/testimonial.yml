@@ -23,3 +23,9 @@ item    :
     clientThumb : images/client-logo/client-4.jpg
     clientName  : Christine Lyon
     clientDesignation: Parent
+
+  - quote       : >
+       The team from Bravo was professional and versatile. They worked to adjust their approach to our evolving needs and delivered a gorgeous, well-designed product that will enhance learning for all of our employees
+    clientThumb : images/client-logo/bethany-from-fusion.png
+    clientName  : Bethany Schutter
+    clientDesignation: Organizational Development Lead, Fusion Education Group
