@@ -81,7 +81,7 @@ theme = "navigator-hugo"
     # Hero Area Section
     [params.hero]
         enable  = true
-        heading = "Success through collaboration and the power of our technology"
+        heading = "Success through collaboration and the power of technology"
         description = "We're a trusted technology partner of Forbes Top 50 companies. We have a reputation of taking time to truly understand your needs, ensuring the technology we build and high-quality service we deliver adds value at every turn and aligns with your business goals."
         button  = true
         btnText = "Explore How We Can Help"
