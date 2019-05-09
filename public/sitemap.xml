@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//www.bravolt.com/blog/google-io-2019-recap/</loc>
+    <lastmod>2019-05-09T12:11:29+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//www.bravolt.com/blog/nullable-reference-types/</loc>
+    <lastmod>2019-05-08T12:00:00+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//www.bravolt.com/blog/what-is-rest/</loc>
     <lastmod>2019-04-05T12:11:29+06:00</lastmod>
   </url>
@@ -134,7 +144,7 @@
   
   <url>
     <loc>//www.bravolt.com/</loc>
-    <lastmod>2019-04-05T12:11:29+06:00</lastmod>
+    <lastmod>2019-05-09T12:11:29+06:00</lastmod>
     <priority>0</priority>
   </url>
   
