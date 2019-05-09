@@ -7,6 +7,8 @@ item    :
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg
     list  :
+      - name: HRIS Analyst
+        linkToImage: ../images/jobdescriptions/1-hris-analyst.pdf
       - name: Senior Software Developer
         linkToImage: ../images/jobdescriptions/14-senior-software-developer.pdf
       - name: Senior Java Developer
