@@ -76,14 +76,6 @@ member  :
     name          : Kate Stiltner
     #designation   : Title
 
-  - image         : images/team/josh-kovach.png
-    name          : Josh Kovach
-    #designation   : Title
-
-  - image         : images/team/jesse-harrison.png
-    name          : Jesse Harrison
-    #designation   : Title
-
   - image         : images/team/phototemplate9.png
     name          : Steve Gibson
     #designation   : Title
@@ -96,20 +88,12 @@ member  :
     name          : Sam Berry
     #designation   : Title
 
-  - image         : images/team/mike-kolarik.png
-    name          : Michael Kolarik
-    #designation   : Title
-
   - image         : images/team/ed-devries.png
     name          : Ed Devries
     #designation   : Title
 
   - image         : images/team/phototemplate5.png
     name          : Alex Gutierrez
-    #designation   : Title
-
-  - image         : images/team/jake-coddaire.png
-    name          : Jake Coddaire
     #designation   : Title
 
   - image         : images/team/phototemplate2.jpg
