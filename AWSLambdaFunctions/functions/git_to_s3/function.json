@@ -1,0 +1,5 @@
+{
+    "description": "Takes https://github.com/BravoLT/www.bravolt.com master branch and puts it in the RyanWise.Me S3 bucket and invalidates CloudFront",
+    "runtime": "python3.7",
+    "timeout": 300
+}
