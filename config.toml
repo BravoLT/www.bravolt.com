@@ -57,6 +57,7 @@ theme = "navigator-hugo"
         url     = "/agile"
         weight  = 4
 
+
     # Footer Quick links Menu
     [[menu.quicklink]]
         name    = "About"
