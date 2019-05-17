@@ -15,7 +15,7 @@ import mimetypes
 def getFileFromGit():
     return urlopen("https://github.com/BravoLT/www.bravolt.com/archive/master.zip").read()
 
-def invalidateAllCFFiles(fileList):
+def invalidateAllCFFiles():
     distID = "E24ZOIJF79BO2Z"
 
     cloudFrontConn = boto3.client('cloudfront')
@@ -23,8 +23,8 @@ def invalidateAllCFFiles(fileList):
         DistributionId=distID, 
         InvalidationBatch={
             'Paths': {
-                'Quantity': len(fileList),
-                'Items': fileList
+                'Quantity': 1,
+                'Items': ['/*']
             },
             'CallerReference': 'Lambda:'+ str(time.time())
         })
@@ -36,7 +36,6 @@ def uploadZipToS3():
     s3 = boto3.client('s3')
     
     putObjects = []
-    fileList = []
     with io.BytesIO(getFileFromGit()) as tf:
         tf.seek(0)
         with zipfile.ZipFile(tf, mode='r') as zipf:
@@ -56,12 +55,11 @@ def uploadZipToS3():
 
                 putFile = s3.put_object(Bucket=s3Target, Key=fileName, Body=zipf.read(file), ACL='public-read', ContentType=mimetype)
 
-                fileList.append('/' + fileName)
                 putObjects.append(putFile)
                 print(fileName)
 
     if len(putObjects) > 0:
-        invalidateAllCFFiles(fileList)
+        invalidateAllCFFiles()
         return "Success!"
     else:
         return "Error"
@@ -70,7 +68,7 @@ def handle(event, context):
 
     body = ""
     statusCode = 200
-
+    
     try:
        body = uploadZipToS3() 
     except Exception as e:
@@ -81,5 +79,3 @@ def handle(event, context):
         'statusCode': statusCode,
         'body': json.dumps(body)
     }
-
-uploadZipToS3()
