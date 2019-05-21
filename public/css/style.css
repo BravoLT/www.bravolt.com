@@ -923,7 +923,7 @@ video.banner {
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  z-index: -1;  
+  z-index: -1;
 }
 
 .contact-form input[type="file"] + label {
@@ -1614,7 +1614,7 @@ video.banner {
 }
 
 .post-item .post-content p {
-  color: #757575;
+  color: #3f3f3f;
   margin: 10px 0;
 }
 
