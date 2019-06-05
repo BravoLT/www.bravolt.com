@@ -9,8 +9,6 @@ item    :
     list  :
       - name: Software Developer
         linkToImage: ../images/jobdescriptions/1-software-developer.pdf
-      - name: HRIS Analyst
-        linkToImage: ../images/jobdescriptions/2-hris-analyst.pdf
       - name: Senior Java Developer
         linkToImage: ../images/jobdescriptions/3-senior-java-developer.pdf
       - name : Java Developer
@@ -23,7 +21,3 @@ item    :
         linkToImage: ../images/jobdescriptions/7-senior-project-manager.pdf
       - name : Quality Assurance (QA) Analyst
         linkToImage: ../images/jobdescriptions/8-quality-assurance-qa-analyst.pdf
-      - name : Salesforce Developer
-        linkToImage: ../images/jobdescriptions/9-salesforce-developer.pdf
-      - name : Salesforce Business Analyst
-        linkToImage: ../images/jobdescriptions/10-salesforce-business-analyst.pdf
