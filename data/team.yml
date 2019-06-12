@@ -18,84 +18,104 @@ subtitle: We are a diverse group, with years of experience and deep technical kn
 member  :
   - image         : images/team/dave-schoutens.png
     name          : Dave Schoutens
-  #  designation   : Title
+    designation   : Senior Software Developer & Raspberry Pi Instructor
 
   - image         : images/team/mike-hartung.png
     name          : Mike Hartung
-  #  designation   : Title
+    designation   : Senior Scrum Master
 
   - image         : images/team/joe.jpg
     name          : Joe Murray
-  #  designation   : Title
+    designation   : Business Development & Client Engagement Specialist
 
   - image         : images/team/alysa-passage.png
     name          : Alysa Passage
-  #  designation   : Title
+    designation   : Digital, CX, Culture Lead
 
   - image         : images/team/edward-nausieda.png
     name          : Ed Nausieda
-  #  designation   : Title
+    designation   : President
 
   - image         : images/team/yvonne.jpg
     name          : Yvonne Nausieda
-  #  designation   : HR Manager
+    designation   : HR Manager
 
   - image         : images/team/joel-heeren.png
     name          : Joel Heeren
-#    designation   : Title
+    designation   : Business Analyst, CSM
 
   - image         : images/team/beau-furrow.png
     name          : Beau Furrow
-#    designation   : Title
+    designation   : Software Developer
 
   - image         : images/team/matthew-underhill.png
     name          : Matthew Underhill
-#    designation   : Title
+    designation   : Software Developer, Raspberry Pi Instructor
 
   - image         : images/team/ryan-wise.png
     name          : Ryan Wise
-  #designation   : Title
+    designation   : Software Developer
 
   - image         : images/team/ellen-spiker.png
     name          : Ellen Spiker
-#    designation   : Title
+    designation   : Project Coodinator/Office Administrator, CTA
 
   - image         : images/team/matt-armand.png
     name          : Matt Armand
-    #designation   : Title
+    designation   : Senior Software Developer, CSM
 
   - image         : images/team/gary-rohs.png
     name          : Gary Rohs
-    #designation   : Title
+    designation   : Senior Project Manager/Business Analyst, CSM
 
   - image         : images/team/julie-molnar.png
     name          : Julie Molnar
-    #designation   : Title
+    designation   : Quality Assurance Analyst
 
   - image         : images/team/phototemplate4.png
     name          : Kate Stiltner
-    #designation   : Title
+    designation   : Business Analyst, CSM
 
   - image         : images/team/phototemplate9.png
     name          : Steve Gibson
-    #designation   : Title
+    designation   : Senior Software Developer
 
   - image         : images/team/sammy-lindsey.png
     name          : Sammy Lindsey
-    #designation   : Title
+    designation   : Project Manager
 
   - image         : images/team/sam-berry.png
     name          : Sam Berry
-    #designation   : Title
+    designation   : Senior Software Developer, CSM
 
   - image         : images/team/ed-devries.png
     name          : Ed Devries
-    #designation   : Title
+    designation   : Software Developer
 
   - image         : images/team/phototemplate5.png
     name          : Alex Gutierrez
-    #designation   : Title
+    designation   : Business Analyst, CSM
 
   - image         : images/team/phototemplate2.jpg
     name          : Eric Fox
-    #designation   : Title
+    designation   : Senior Software Developer
+
+  - image         : images/team/phototemplate10.png
+    name          : Kris Coleman
+    designation   : Senior Software Developer
+
+  - image         : images/team/phototemplate9.png
+    name          : Chris Penny
+    designation   : Cinematographer
+
+  - image         : images/team/phototemplate7.png
+    name          : Whit Wu
+    designation   : Software Developer
+
+  - image         : images/team/phototemplate1.png
+    name          : Chad Handrich
+    designation   : Senior Software Developer
+
+  - image         : images/team/phototemplate6.png
+    name          : Zach Hirsch
+    designation   : Senior Software Developer
