@@ -38,6 +38,10 @@ theme = "navigator-hugo"
         name    = "Contact"
         url     = "/contact"
         weight  = 7
+    [[menu.nav]]
+        name    = "Shop"
+        url     = "https://shop.bravolt.com/collections/all"
+        weight  = 8
 
     # Footer Service Menu
     [[menu.service]]
