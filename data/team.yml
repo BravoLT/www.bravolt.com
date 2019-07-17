@@ -16,106 +16,106 @@ subtitle: We are a diverse group, with years of experience and deep technical kn
     #dribbbleURL   : https://dribbble.com/
 
 member  :
-  - image         : images/team/dave-schoutens.png
+  - image         : images/team/dave-s.png
     name          : Dave Schoutens
     designation   : Senior Software Developer & Raspberry Pi Instructor
 
-  - image         : images/team/mike-hartung.png
+  - image         : images/team/mike-h.png
     name          : Mike Hartung
     designation   : Senior Scrum Master
 
-  - image         : images/team/joe.jpg
-    name          : Joe Murray
-    designation   : Business Development & Client Engagement Specialist
+  - image         : images/team/zach-h.png
+    name          : Zach Hirsch
+    designation   : Senior Software Developer
 
-  - image         : images/team/alysa-passage.png
+  - image         : images/team/alysa-p.png
     name          : Alysa Passage
     designation   : Digital, CX, Culture Lead
 
-  - image         : images/team/edward-nausieda.png
+  - image         : images/team/joe-m.png
+    name          : Joe Murray
+    designation   : Business Development & Client Engagement Specialist
+
+  - image         : images/team/ed-n.png
     name          : Ed Nausieda
     designation   : President
 
-  - image         : images/team/yvonne.jpg
+  - image         : images/team/yvonne-n.png
     name          : Yvonne Nausieda
     designation   : HR Manager
 
-  - image         : images/team/joel-heeren.png
+  - image         : images/team/joel-h.png
     name          : Joel Heeren
     designation   : Business Analyst, CSM
 
-  - image         : images/team/beau-furrow.png
+  - image         : images/team/beau-f.png
     name          : Beau Furrow
     designation   : Software Developer
 
-  - image         : images/team/matthew-underhill.png
+  - image         : images/team/matthew-u.png
     name          : Matthew Underhill
     designation   : Software Developer, Raspberry Pi Instructor
 
-  - image         : images/team/ryan-wise.png
+  - image         : images/team/ryan-w.png
     name          : Ryan Wise
     designation   : Software Developer
 
-  - image         : images/team/ellen-spiker.png
+  - image         : images/team/ellen-s.png
     name          : Ellen Spiker
     designation   : Project Coodinator/Office Administrator, CTA
 
-  - image         : images/team/matt-armand.png
+  - image         : images/team/matt-a.png
     name          : Matt Armand
     designation   : Senior Software Developer, CSM
 
-  - image         : images/team/gary-rohs.png
+  - image         : images/team/gary-r-2.png
     name          : Gary Rohs
     designation   : Senior Project Manager/Business Analyst, CSM
 
-  - image         : images/team/julie-molnar.png
+  - image         : images/team/julie-m.png
     name          : Julie Molnar
     designation   : Quality Assurance Analyst
 
-  - image         : images/team/phototemplate4.png
+  - image         : images/team/kate-s.png
     name          : Kate Stiltner
     designation   : Business Analyst, CSM
 
-  - image         : images/team/phototemplate9.png
-    name          : Steve Gibson
-    designation   : Senior Software Developer
+  - image         : images/team/whit-w.png
+    name          : Whit Wu
+    designation   : Software Developer
 
-  - image         : images/team/sammy-lindsey.png
+  - image         : images/team/sammy-l.png
     name          : Sammy Lindsey
     designation   : Project Manager
 
-  - image         : images/team/sam-berry.png
+  - image         : images/team/sam-b-new.png
     name          : Sam Berry
     designation   : Senior Software Developer, CSM
 
-  - image         : images/team/ed-devries.png
+  - image         : images/team/ed-d.png
     name          : Ed Devries
     designation   : Software Developer
 
-  - image         : images/team/phototemplate5.png
+  - image         : images/team/alex-g.png
     name          : Alex Gutierrez
     designation   : Business Analyst, CSM
 
-  - image         : images/team/phototemplate2.jpg
+  - image         : images/team/eric-f.png
     name          : Eric Fox
     designation   : Senior Software Developer
 
-  - image         : images/team/phototemplate10.png
+  - image         : images/team/kris-c.png
     name          : Kris Coleman
+    designation   : Senior Software Developer
+
+  - image         : images/team/phototemplate9.png
+    name          : Steve Gibson
     designation   : Senior Software Developer
 
   - image         : images/team/phototemplate9.png
     name          : Chris Penny
     designation   : Cinematographer
 
-  - image         : images/team/phototemplate7.png
-    name          : Whit Wu
-    designation   : Software Developer
-
   - image         : images/team/phototemplate1.png
     name          : Chad Handrich
-    designation   : Senior Software Developer
-
-  - image         : images/team/phototemplate6.png
-    name          : Zach Hirsch
     designation   : Senior Software Developer
