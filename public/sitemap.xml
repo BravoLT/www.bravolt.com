@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//www.bravolt.com/</loc>
+    <lastmod>2019-07-12T12:11:29+06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>//www.bravolt.com/blog/bravos-ribbon-cutting-open-house/</loc>
     <lastmod>2019-07-12T12:11:29+06:00</lastmod>
   </url>
@@ -155,12 +161,6 @@
   <url>
     <loc>//www.bravolt.com/blog/bravo-open-source-symposium/</loc>
     <lastmod>2015-10-21T12:11:29+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//www.bravolt.com/</loc>
-    <lastmod>2019-07-12T12:11:29+06:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
