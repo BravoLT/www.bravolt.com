@@ -20,17 +20,9 @@ member  :
     name          : Dave Schoutens
     designation   : Senior Software Developer & Raspberry Pi Instructor
 
-  - image         : images/team/mike-h.png
-    name          : Mike Hartung
-    designation   : Senior Scrum Master
-
   - image         : images/team/zach-h.png
     name          : Zach Hirsch
     designation   : Senior Software Developer
-
-  - image         : images/team/alysa-p.png
-    name          : Alysa Passage
-    designation   : Digital, CX, Culture Lead
 
   - image         : images/team/joe-m.png
     name          : Joe Murray
@@ -52,10 +44,6 @@ member  :
     name          : Beau Furrow
     designation   : Software Developer
 
-  - image         : images/team/matthew-u.png
-    name          : Matthew Underhill
-    designation   : Software Developer, Raspberry Pi Instructor
-
   - image         : images/team/ryan-w.png
     name          : Ryan Wise
     designation   : Software Developer
@@ -64,15 +52,11 @@ member  :
     name          : Ellen Spiker
     designation   : Project Coodinator/Office Administrator, CTA
 
-  - image         : images/team/matt-a.png
-    name          : Matt Armand
-    designation   : Senior Software Developer, CSM
-
   - image         : images/team/gary-r-2.png
     name          : Gary Rohs
     designation   : Senior Project Manager/Business Analyst, CSM
 
-  - image         : images/team/julie-m.png
+  - image         : images/team/julie-m3.png
     name          : Julie Molnar
     designation   : Quality Assurance Analyst
 
@@ -83,10 +67,6 @@ member  :
   - image         : images/team/whit-w.png
     name          : Whit Wu
     designation   : Software Developer
-
-  - image         : images/team/sammy-l.png
-    name          : Sammy Lindsey
-    designation   : Project Manager
 
   - image         : images/team/sam-b-new.png
     name          : Sam Berry
