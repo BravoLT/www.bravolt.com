@@ -7,10 +7,8 @@ item    :
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg
     list  :
-      - name: Software Developer
+      - name: .Net Developer
         linkToImage: ../images/jobdescriptions/1-software-developer.pdf
-      - name: Senior Java Developer
-        linkToImage: ../images/jobdescriptions/3-senior-java-developer.pdf
       - name : Java Developer
         linkToImage: ../images/jobdescriptions/4-java-developer.pdf
       - name : Scrum Master
