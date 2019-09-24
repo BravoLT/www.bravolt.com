@@ -10,12 +10,13 @@ servicelist:
   - name    : Instructional Designers
   - name    : eLearning Developers
 clientLogo:
+  - image   : images/client-logo/adient.png
   - image   : images/client-logo/amway.png
-  - image   : images/client-logo/baudville.png
   - image   : images/client-logo/benteler.png
-  - image   : images/client-logo/byrne.png
+  - image   : images/client-logo/bluecrossblueshield.png
   - image   : images/client-logo/cochlear.png
   - image   : images/client-logo/dematic.png
+  - image   : images/client-logo/gordonfoods.png
   - image   : images/client-logo/hermanmiller.png
   - image   : images/client-logo/johnsoncontrols.png
   - image   : images/client-logo/perrigo.png
