@@ -1,0 +1,144 @@
+{{ if .Site.Data.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<!-- image fixes -->
+<style>
+ @media only screen and (min-width: 767px) {
+				.center-image-hv {
+					position: absolute;
+					margin-top: auto;
+					margin-bottom: auto;
+					top: 0;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					max-width: 90%;
+				}
+				.container .row {
+					padding-top: 50px !important;
+				}
+				.container .row:not(:last-of-type){
+					padding-bottom: 25px;
+				}
+}
+.container .row {
+	padding-top: 25px;
+}
+a.register {
+	border: none;
+	padding: 15px 50px;
+	margin: 0;
+	background: #4ba6dd;
+	color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+}
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: 5px;
+  padding-left: 5px;
+  margin: 10px 0;
+}
+ul.dashed > li:before {
+  content: "-";
+  margin-right: 5px;
+  text-indent: 5px;
+}
+</style>
+<section class="cspo section-sm" id="about-cspo">
+    <div class="container">
+        {{ range .Site.Data.cspo.item }}
+            {{ if .positionRight }}
+                <div class="row justify-content-center row-eq-height">
+                    <div class="col-md-5 col-md-5 offset-md-1 col-sm-12">
+                        <div class="content">
+                            <h2>{{ .title }}</h2>
+                            <p>
+                                {{ .description }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-sm-12 text-center">
+                        <img src="/{{ .image }}" class="img-fluid rounded center-image-hv" alt="about-image">
+                    </div>
+                </div>
+            {{ else }}
+                <div class="row mb-50 justify-content-center">
+                    <div class="col-md-5 col-sm-12 text-center">
+                        <img src="/{{ .image }}" class="img-fluid rounded center-image-hv" alt="about-image">
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <div class="content">
+                            <h2>{{ .title }}</h2>
+                            <p>
+                                {{ .description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-12 col-md-5 col-sm-12 d-none d-md-block text-center offset-md-1">
+				<img src="/images/blog/golocal.jpg" class="img-fluid center-image-hv rounded shadow" alt="about-image">
+			</div>
+			<div class="col-md-5 col-md-5 col-sm-12 ">
+				<div class="content">
+					<h2>Important Info</h2>
+					<h6>Dates</h6>
+					<p>November 21-22</p>
+					<h6>Location</h6>
+					<p>Grand Rapids, MI</p>
+					<h6>Cost</h6>
+					<p>$999.00 (early bird), $1,195.00 (regular)</p>
+					<p>NOTE: The possibility of state grant funding is available to participants. For partial course fee reimbursement options, please contact Anne Pentiak at West Michigan Works! at:  apentiak@westmiworks.org</p>
+				</div>
+			</div>
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-md-5 col-md-5 col-sm-12 offset-md-1">
+				<div class="content">
+					<h2>Included In Course</h2>
+					<ul class="dashed">
+						<li>Attendee workbook</li>
+						<li>Two-year membership with Scrum Alliance</li>
+						<li>Course certificate of completion</li>
+						<li>14-16 PDUS, and correspondingly 14-16 SEUs (Varies according to the CST)</li>
+					</ul>
+					<p>NOTE: Attendees must attend both days of the course in order to qualify for the certification.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-5 col-sm-12  text-center">
+				<img src="/images/blog/responsive.jpg" class="img-fluid d-none d-md-block center-image-hv rounded shadow" alt="about-image">
+			</div>
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-md-5 col-sm-12 offset-md-1 text-center">
+				<img src="/images/blog/agile.jpg" class="img-fluid center-image-hv d-none d-md-block rounded shadow" alt="about-image">
+			</div>
+			<div class="col-md-5 col-sm-12 ">
+				<div class="content">
+					<h2>Certification</h2>
+					<ul class="dashed">
+						<li>A Certified Scrum Product Owner (CSPO) certification</li>
+						<li>A CSPO digital badge to promote their accomplishment online</li>
+					<ul>
+					<p>NOTE: The Certified Scrum Trainer determines your completion of the course and has the discretion in awarding certificates based on your engagement in the classroom.  Finally, certificates expire two years from the date the certification is earned. Scrum Alliance certification renewal guidelines and fees apply.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-sm-10 off-set-sm-1 text-center justify-center"> 
+				<a class="register" target="_blank" href="https://www.eventbrite.com/e/76273940409">Register Now!</a>
+			</div>
+		</div>
+  </div>
+		
+</section>
+
+{{"<!-- About section End -->" | safeHTML}}
+{{ end }}
