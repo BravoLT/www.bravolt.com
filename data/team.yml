@@ -50,7 +50,7 @@ member  :
 
   - image         : images/team/ellen-s.png
     name          : Ellen Spiker
-    designation   : Project Coodinator/Office Administrator, CTA
+    designation   : Project Coodinator
 
   - image         : images/team/gary-r-2.png
     name          : Gary Rohs
@@ -60,9 +60,17 @@ member  :
     name          : Julie Molnar
     designation   : Quality Assurance Analyst
 
+  - image         : images/team/phototemplate1.png
+    name          : Tori Mock
+    designation   : Digital & CX Lead
+
   - image         : images/team/kate-s.png
     name          : Kate Stiltner
     designation   : Business Analyst, CSM
+
+  - image         : images/team/phototemplate9.png
+    name          : Thomas Lynema
+    designation   : Senior Software Developer
 
   - image         : images/team/whit-w.png
     name          : Whit Wu
@@ -86,6 +94,10 @@ member  :
 
   - image         : images/team/kris-c.png
     name          : Kris Coleman
+    designation   : Senior Software Developer
+
+  - image         : images/team/phototemplate1.png
+    name          : Richard Rowell
     designation   : Senior Software Developer
 
   - image         : images/team/phototemplate9.png
