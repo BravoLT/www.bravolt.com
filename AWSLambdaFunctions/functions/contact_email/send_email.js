@@ -11,7 +11,7 @@ module.exports = function sendEmail(subject, body, resumeName, resume) {
     return new Promise((resolve, reject) => {
         const params = {
             from: '"' + process.env.FROM_NAME + '" '+ process.env.FROM_EMAIL,
-            to: ["ryan.wise@bravolt.com", "alysa.passage@bravolt.com", "edward.nausieda@bravolt.com", "joe.murray@bravolt.com"],
+            to: ["tori.mock@bravolt.com", "edward.nausieda@bravolt.com", "joe.murray@bravolt.com"],
             subject: subject,
             html:  body
         }
