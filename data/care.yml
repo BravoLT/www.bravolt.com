@@ -5,12 +5,14 @@ description: >
 image     : images/care/care.jpg
 servicelist:
   - name    : Raspberry Pi Camp
+  - name    : Grand Rapids Public Schools
   - name    : Extra Life
   - name    : Kids Food Basket
   - name    : Google I/O
   - name    : Affinity Mentoring
 clientLogo:
   - image   : images/care/carelogos/raspberry-pi-logo.jpg
+  - image   : images/care/carelogos/grps.png
   - image   : images/care/carelogos/affinity-logo.jpg
   - image   : images/care/carelogos/bravo-cares-logo.jpg
   - image   : images/care/carelogos/extra-life-logo.jpg
