@@ -39,8 +39,8 @@ theme = "navigator-hugo"
         url     = "/contact"
         weight  = 7
     [[menu.nav]]
-        name    = "CSPO"
-        url     = "/cspo"
+        name    = "Agile"
+        url     = "/agile"
         weight  = 8
 	[[menu.nav]]
         name    = "Shop"
