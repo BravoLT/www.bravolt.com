@@ -72,10 +72,6 @@ member  :
     name          : Whit Wu
     designation   : Software Developer
 
-  - image         : images/team/sam-b-new.png
-    name          : Sam Berry
-    designation   : Senior Software Developer, CSM
-
   - image         : images/team/ed-d.png
     name          : Ed Devries
     designation   : Software Developer
@@ -83,14 +79,6 @@ member  :
   - image         : images/team/alex-g.png
     name          : Alex Gutierrez
     designation   : Business Analyst, CSM
-
-  - image         : images/team/eric-f.png
-    name          : Eric Fox
-    designation   : Senior Software Developer
-
-  - image         : images/team/kris-c.png
-    name          : Kris Coleman
-    designation   : Senior Software Developer
 
   - image         : images/team/phototemplate1.png
     name          : Richard Rowell
