@@ -13,8 +13,8 @@ item    :
         linkToImage: ../images/jobdescriptions/4-java-developer.pdf
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
-      - name : Business Systems Analyst
-        linkToImage: ../images/jobdescriptions/6-business_system_analyst.pdf
+      - name : Agile Business Analyst - Team Lead
+        linkToImage: ../images/jobdescriptions/6-agile-ba-team-lead.pdf
       - name : Senior Project Manager
         linkToImage: ../images/jobdescriptions/7-senior-project-manager.pdf
       - name : Quality Assurance (QA) Analyst
@@ -25,5 +25,3 @@ item    :
         linkToImage: ../images/jobdescriptions/13-senior-project-manager-southfield.pdf
       - name : DevOps Engineer
         linkToImage: ../images/jobdescriptions/15-devops-engineer-job-description.pdf
-      - name : Digital and CX Lead
-        linkToImage: ../images/jobdescriptions/16-digital-cx-lead-job-description.pdf
