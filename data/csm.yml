@@ -1,7 +1,7 @@
 enable  : true
 item    :
   - positionRight : true
-    image : images/cspo/cspo-about-1.png
-    title : About CSPO
+    image : images/cspo/csm-badge-2.png
+    title : About CSM
     description : >
-     The Certified Scrum Product Owner (CSPO) course is a 2-day immersive learning experience. If you’re someone who is comfortable with the “business side” of projects, you are probably the right person to aspire to achieve a CSPO certification. While the Certified ScrumMaster® (CSM®) helps the Scrum team work together to learn and implement Scrum, as a CSPO, you create the product vision, order the product backlog, and make sure the best possible job is completed for the customer. 
+     The Certified Scrum Master (CSPM) course is a 2-day immersive learning experience. As a Certified ScrumMaster® (CSM®), you’ll help the Scrum Team perform at their highest level. CSMs also protect the team from both internal and external distractions. Through the certification process, you will learn the Scrum framework and gain an understanding of team roles, events, and artifacts. 
