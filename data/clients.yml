@@ -1,13 +1,14 @@
 enable    : true
 title     : Custom Technology Solutions
 description: >
-  From Java, .Net, Angular JS, to Salesforce, Responive eLearning and more — let our software engineers and technology consultants develop sound products and deliver high-quality service that helps you reach your organization's goals. Our experienced team has an impressive background in designing, developing, and maintaining software applications and consulting on projects large or small.
+  From dedicated Agile teams to individual contributors, we can assist you with creating innovative software and delivering high quality services to help you reach your business goals. The Bravo Team has an impressive background in designing, developing, and maintaining software applications and leading technical projects large or small. Our experts include:
 image     : images/about/about-1.jpg
 servicelist:
-  - name    : Software Engineers
-  - name    : Technology Consultants
-  - name    : Project Managers
-  - name    : Instructional Designers
+  - name    : Software Developers
+  - name    : Scrum Masters
+  - name    : Business Analysts
+  - name    : QA Analysts
+  - name    : Tech Leads
   - name    : eLearning Developers
 clientLogo:
   - image   : images/client-logo/adient.png
