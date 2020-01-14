@@ -7,10 +7,10 @@ item    :
     sideTitle : Open Positions
     image : /images/careers/careers-page-image.jpg
     list  :
-      - name: .Net Developer
-        linkToImage: ../images/jobdescriptions/1-dotnet-developer.pdf
-      - name : Java Developer
-        linkToImage: ../images/jobdescriptions/4-java-developer.pdf
+      - name: Software Developer - .NET
+        linkToImage: ../images/jobdescriptions/17-dot-net-developer.pdf
+      - name : Software Developer - Java 
+        linkToImage: ../images/jobdescriptions/18-java-developer.pdf
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
       - name : Agile Business Analyst - Team Lead
