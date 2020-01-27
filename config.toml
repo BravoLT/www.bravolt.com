@@ -12,16 +12,13 @@ theme = "navigator-hugo"
     # Navbar Menus
     [[menu.nav]]
         name    = "About"
+        identifier = "About"
         url     = "/about"
         weight  = 2
     [[menu.nav]]
         name    = "Services"
         url     = "/service"
-        weight  = 3
-    #[[menu.nav]]
-        #name    = "Portfolio"
-        #url     = "/Portfolio"
-        #weight  = 4
+        weight  = 2
     [[menu.nav]]
         name    = "Careers"
         url     = "/careers"
@@ -29,14 +26,17 @@ theme = "navigator-hugo"
     [[menu.nav]]
         name    = "Blog"
         url     = "/blog"
+        parent  = "About"
         weight  = 5
     [[menu.nav]]
         name    = "We Care"
         url     = "/care"
+        parent  = "About"
         weight  = 6
     [[menu.nav]]
         name    = "Contact"
         url     = "/contact"
+        parent  = "About"
         weight  = 7
     [[menu.nav]]
         name    = "Agile"
