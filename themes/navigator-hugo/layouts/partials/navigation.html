@@ -17,9 +17,20 @@
                                 <a class="nav-link" href="{{ .Site.BaseURL }}">{{ with .Site.Params.home }}{{ . }}{{ end }}</a>
                             </li>
                             {{ range .Site.Menus.nav }}
+                            {{ if .HasChildren }}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-root" href="{{ .URL }}">{{ .Name }}</a>
+                                <div class="dropdown-content">
+                                {{ range .Children }}
+                                    <a class="dropdown-link" href="{{.URL}}">{{.Name}}</a>
+                                {{ end }}
+                                </div>
+                            </li>
+                            {{ else }}
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
                             </li>
+                            {{ end }}
                             {{ end }}
                         </ul>
                     </div>
