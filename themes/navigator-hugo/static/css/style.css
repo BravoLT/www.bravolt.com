@@ -52,6 +52,15 @@ a:focus, a:hover {
   color: #4ba6dd;
 }
 
+.rpi-brand {
+    max-width: 50px;
+    transition: transform .2s ease-out;
+}
+
+.rpi-brand:hover {
+    transform: rotateZ(-10deg);
+}
+
 .dropdown-content .dropdown-link {
   display: block;
   padding: 10px;

@@ -1,0 +1,91 @@
+{{ if .Site.Data.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<!-- image fixes -->
+<style>
+ @media only screen and (min-width: 767px) {
+				.center-image-hv {
+					position: absolute;
+					margin-top: auto;
+					margin-bottom: auto;
+					top: 0;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					max-width: 50%;
+				}
+				.container .row {
+					padding-top: 50px !important;
+				}
+				.container .row:not(:last-of-type){
+					padding-bottom: 25px;
+				}
+}
+.container .row {
+	padding-top: 25px;
+}
+a.register {
+	border: none;
+	padding: 15px 50px;
+	margin: 0;
+	background: #4ba6dd;
+	color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+}
+@media only screen and (min-width: 1200px) {
+#rpi-slider {
+    max-width: 80%;
+    margin: auto;
+}
+}
+</style>
+<section class="cspo section-sm" id="about-cspo">
+    <div class="container">
+        <div class="row justify-content-center row-eq-height">
+            <div class="col-md-5 col-md-5 col-sm-12">
+                <div class="content">
+                    <h2>What is a Raspberry Pi?</h2>
+                    <p>
+                    Despite what the name might infer, it is not a de-licious baked good. The Raspberry Pi is a low cost computer that can fit into the palm of your hand. While the Raspberry Pi might be small, it functions just the same as a full size computer. It originat-ed in the UK where it was designed to bring basic computer science to developing countries. How-ever, it quickly gained popularity among academia and hobbyists alike. <a href="https://www.raspberrypi.org/help/what-%20is-a-raspberry-pi/" target="_blank">What is a raspberry pi?</a> 
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 offset-md-1 col-sm-12 text-center">
+                <img src="/images/rpi/raspberrypi.jpg" class="img-fluid rounded center-image-hv" alt="about-image">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center row-eq-height">
+            <div class="col-12 col-md-5 col-sm-12 order-md-1 order-sm-12 text-center">
+                <div id="rpi-slider">
+                    <div><img class="img-fluid" src="/images/blog/raspberrypi2016.jpg" alt="client-logo"></div>
+                    <div><img class="img-fluid" src="/images/blog/raspberrypi2017.jpg" alt="client-logo"></div>
+                    <div><img class="img-fluid" src="/images/blog/raspberrypi2018.jpg" alt="client-logo"></div>
+                </div>
+            </div>
+            <div class="col-md-5 col-md-5 offset-md-1 order-md-12 col-sm-12 order-sm-1">
+                <div class="content">
+                    <h2>Raspberry Pi Youth Coding Camp</h2>
+                    <p>At Bravo LT, we believe STEM education is key to strengthening West Michigan from the inside out. We aim to ignite a passion for technology and programming in the children of our community through our Raspberry Pi Youth Coding Camps. Check out our current camp offerings, <a href="https://www.eventbrite.com/o/bravo-lt-8314240115" target="_blank">here</a>.  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center row-eq-height">
+            <div class="col-md-5 col-md-5 col-sm-12">
+                <div class="content">
+                    <h2>Get Involved</h2>
+                    <p>If you’re a company, family, or individual who believes in inspiring students within STEM fields and bridging the gender and diversity gap in the tech sector — we invite you to support Pi Camp by becoming a Champion of Technology for Children, today! Email <a href="mailto:info@bravolt.com">info@bravolt.com</a> to learn about how you can support students with your donation to camp.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 offset-md-1 col-sm-12 text-center">
+                <img src="/images/rpi/pilogo.jpg" class="img-fluid rounded center-image-hv" alt="about-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+{{"<!-- About section End -->" | safeHTML}}
+{{ end }}

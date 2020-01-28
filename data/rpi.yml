@@ -1,0 +1,8 @@
+enable  : true
+item    :
+  - positionRight : true
+    image : images/cspo/cspo-about-1.png
+    title : About CSPO
+    description : >
+        hello
+

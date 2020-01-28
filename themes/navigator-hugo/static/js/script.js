@@ -53,6 +53,16 @@
   		slidesToScroll: 1,
 	});
 
+    $('#rpi-slider').slick({
+        infinite: true,
+        centerPadding: "50px",
+        arrows: false,
+        autoplay: true,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
 	//	Company Slider Carousel
 	$('.company-gallery').slick({
 		infinite: true,
