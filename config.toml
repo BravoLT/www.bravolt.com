@@ -38,14 +38,19 @@ theme = "navigator-hugo"
         url     = "/contact"
         parent  = "About"
         weight  = 7
+     [[menu.nav]]
+        name    = "Raspberry Pi"
+        url     = "/rpi"
+        parent  = "About"
+        weight  = 8
     [[menu.nav]]
         name    = "Agile"
         url     = "/agile"
-        weight  = 8
+        weight  = 9
 	[[menu.nav]]
         name    = "Shop"
         url     = "https://shop.bravolt.com/collections/all"
-        weight  = 9
+        weight  = 10
 
     # Footer Service Menu
     [[menu.service]]
