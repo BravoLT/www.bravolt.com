@@ -9,6 +9,8 @@ item    :
     list  :
       - name: Software Developer - .NET
         linkToImage: ../images/jobdescriptions/17-dot-net-developer.pdf
+      - name: Software Developer - Senior Java
+        linkToImage: ../images/jobdescriptions/19-senior-java-developer.pdf
       - name : Software Developer - Java 
         linkToImage: ../images/jobdescriptions/18-java-developer.pdf
       - name : Scrum Master
