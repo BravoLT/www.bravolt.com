@@ -11,6 +11,10 @@ item    :
         linkToImage: ../images/jobdescriptions/17-dot-net-developer.pdf
       - name : Software Developer - Java 
         linkToImage: ../images/jobdescriptions/18-java-developer.pdf
+      - name : Senior Software Developer - Java
+        linkToImage: ../images/jobdescriptions/20-senior-java-developer.pdf
+      - name : Software Engineer - IoT
+        linkToImage: ../images/jobdescriptions/19-software-engineer-iot.pdf    
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
       - name : Agile Business Analyst - Team Lead
