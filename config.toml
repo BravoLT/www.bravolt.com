@@ -51,6 +51,10 @@ theme = "navigator-hugo"
         name    = "Shop"
         url     = "https://shop.bravolt.com/collections/all"
         weight  = 10
+	[[menu.nav]]
+        name    = "COVID-19"
+        url     = "/images/about/bravo-lt-covid-19-response.pdf"
+        weight  = 11
 
     # Footer Service Menu
     [[menu.service]]
