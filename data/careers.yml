@@ -14,7 +14,9 @@ item    :
       - name : Senior Software Developer - Java
         linkToImage: ../images/jobdescriptions/20-senior-java-developer.pdf
       - name : Software Engineer - IoT
-        linkToImage: ../images/jobdescriptions/19-software-engineer-iot.pdf    
+        linkToImage: ../images/jobdescriptions/19-software-engineer-iot.pdf
+      - name : System Analyst
+        linkToImage: ../images/jobdescriptions/21-system-analyst.pdf     
       - name : Scrum Master
         linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
       - name : Agile Business Analyst - Team Lead
