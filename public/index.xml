@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bravo LT | Learning &amp; Technology</title>
@@ -6,7 +6,7 @@
     <description>Recent content on Bravo LT | Learning &amp; Technology</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2020 12:37:52 +0600</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 12:11:29 +0600</lastBuildDate>
     
 	<atom:link href="//www.bravolt.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,7 +26,7 @@
       <pubDate>Fri, 12 Jul 2019 12:11:29 +0600</pubDate>
       
       <guid>//www.bravolt.com/blog/bravos-ribbon-cutting-open-house/</guid>
-      <description>Save the Date##### You&amp;rsquo;re invited to Bravo LT&amp;rsquo;s Ribbon Cutting &amp;amp; Open House Thursday, August 15th, 3pm - 5pm
+      <description>Save the Date You&amp;rsquo;re invited to Bravo LT&amp;rsquo;s Ribbon Cutting &amp;amp; Open House Thursday, August 15th, 3pm - 5pm
 Join us as we celebrate our recent move downtown. Ribbon Cutting at 4pm.
 We can&amp;rsquo;t wait to meet our neighbors and catch up with clients and friends!
 Snacks and drinks provided.
@@ -49,7 +49,7 @@ The free event will be held on August 12 &amp;amp; 13, 2019 at the Bravo office 
       <pubDate>Wed, 29 May 2019 12:11:29 +0600</pubDate>
       
       <guid>//www.bravolt.com/blog/we-moved-downtown-grand-rapids/</guid>
-      <description>Our New Location##### Bravo has officially moved downtown Grand Rapids! Last month we said goodbye to our Cascade Parkway location and (after a few construction projects and a bit of cosmetic work in the new space) hello to Monroe Center. Our official signage is in the works, but in the meantime, we are the dark gray building located at the corner of Division and Monroe Center. More specifically:
+      <description>Our New Location Bravo has officially moved downtown Grand Rapids! Last month we said goodbye to our Cascade Parkway location and (after a few construction projects and a bit of cosmetic work in the new space) hello to Monroe Center. Our official signage is in the works, but in the meantime, we are the dark gray building located at the corner of Division and Monroe Center. More specifically:
 Bravo LT, 40 Monroe Center NW, Suite 11, Grand Rapids, MI 49503</description>
     </item>
     
@@ -121,8 +121,7 @@ The free event will be held on September 11 &amp;amp; 12, 2018 at Calvin College
       
       <guid>//www.bravolt.com/blog/agile-in-grand-rapids/</guid>
       <description>Equip Your Teams with Agile We&amp;rsquo;re passionate about equipping your teams with the cutting-edge Lean Agile Certification training they need!
-This summer we hosted an Agile Advanced Scrum Master Certification course in down-town Grand Rapids. We had a blast hosting and teaching participants from Gordon Food Service, Meijer, Spectrum Health, and more. Most beneficially, great discussions formed across the varying industries which created a learning environment filled with collaboration.
-During the two day certification course we covered such things as:</description>
+This summer we hosted an Agile Advanced Scrum Master Certification course in down-town Grand Rapids. We had a blast hosting and teaching participants from Gordon Food Service, Meijer, Spectrum Health, and more. Most beneficially, great discussions formed across the varying industries which created a learning environment filled with collaboration.</description>
     </item>
     
     <item>
@@ -141,8 +140,7 @@ Google brought a lot to the table through their livestream event. Many were amaz
       <pubDate>Fri, 22 Sep 2017 12:11:29 +0600</pubDate>
       
       <guid>//www.bravolt.com/blog/2017-raspberry-pi-youth-camp-recap/</guid>
-      <description>At Bravo LT, we believe STEM (Science, Technology, Engineering, Math) education is key to strengthening the future for the next generation. As a technology and e-Learning company in West Michigan, we love introducing the next generation of children to technology. Last month we hosted our third-annual Raspberry Pi Youth Camp which gave local students (ages 10-14) an opportunity to explore computer programming in a fun and engaging way.
-  We hosted this free event at Davenport University in Grand Rapids.</description>
+      <description>At Bravo LT, we believe STEM (Science, Technology, Engineering, Math) education is key to strengthening the future for the next generation. As a technology and e-Learning company in West Michigan, we love introducing the next generation of children to technology. Last month we hosted our third-annual Raspberry Pi Youth Camp which gave local students (ages 10-14) an opportunity to explore computer programming in a fun and engaging way.</description>
     </item>
     
     <item>
@@ -239,7 +237,8 @@ The free event, held August 9 and 11, 2016 at Davenport University in Grand Rapi
       <guid>//www.bravolt.com/blog/bravo-open-source-symposium/</guid>
       <description>Bravo Open Source Symposium October 26, November 2, 9, and 16 5:00 - 7:00 PM
 Event Description: BOSS 2015 explores specific open source topics, to include:
- Data Grids: To Infinispan and Beyond (Day 1) Introduction to Docker (Day 2) Maven for Power Users (Day 3) Introduction to Clojure (Day 4)  This free four-day symposium, held on alternating Mondays in September and October, features highly interactive training sessions to include the following delivery methods: traditional lecture and demonstration, video, case studies, hands-on activities and group discussion.</description>
+ Data Grids: To Infinispan and Beyond (Day 1) Introduction to Docker (Day 2) Maven for Power Users (Day 3) Introduction to Clojure (Day 4)  
+This free four-day symposium, held on alternating Mondays in September and October, features highly interactive training sessions to include the following delivery methods: traditional lecture and demonstration, video, case studies, hands-on activities and group discussion.</description>
     </item>
     
   </channel>
