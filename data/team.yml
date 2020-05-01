@@ -32,6 +32,10 @@ member  :
     name          : Ed Nausieda
     designation   : President
 
+  - image         : images/team/phototemplate1.png
+    name          : Matthew Cunningham
+    designation   : Director of People & Culture
+
   - image         : images/team/yvonne-n.png
     name          : Yvonne Nausieda
     designation   : HR Manager
@@ -40,17 +44,9 @@ member  :
     name          : Joel Heeren
     designation   : Business Analyst, CSM
 
-  - image         : images/team/beau-f.png
-    name          : Beau Furrow
-    designation   : Software Developer
-
   - image         : images/team/ryan-w.png
     name          : Ryan Wise
     designation   : Software Developer
-
-  - image         : images/team/gary-r-2.png
-    name          : Gary Rohs
-    designation   : Senior Project Manager/Business Analyst, CSM
 
   - image         : images/team/julie-m.jpg
     name          : Julie Molnar
@@ -72,25 +68,9 @@ member  :
     name          : Whit Wu
     designation   : Software Developer
 
-  - image         : images/team/ed-d.png
-    name          : Ed Devries
-    designation   : Software Developer
-
-  - image         : images/team/alex-g.png
-    name          : Alex Gutierrez
-    designation   : Business Analyst, CSM
-
   - image         : images/team/phototemplate1.png
     name          : Richard Rowell
     designation   : Senior Software Developer
-
-  - image         : images/team/phototemplate9.png
-    name          : Steve Gibson
-    designation   : Senior Software Developer
-
-  - image         : images/team/phototemplate9.png
-    name          : Chris Penny
-    designation   : Cinematographer
 
   - image         : images/team/phototemplate1.png
     name          : Chad Handrich
