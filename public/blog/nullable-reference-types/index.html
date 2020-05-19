@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="description" content="Performance That Works">
 <meta name="author" content="Themefisher.com"> 
-<meta name="generator" content="Hugo 0.58.1" />
+<meta name="generator" content="Hugo 0.69.0" />
 
 <title>Bravo LT | Learning &amp; Technology</title>
 
@@ -149,445 +149,285 @@
                         </li>
                     </ul>
                 </div>
-                
-
-<p>The next version of the C# language, C# 8, is scheduled to ship <a href="https://github.com/dotnet/core/blob/master/roadmap.md#upcoming-ship-dates">in September 2019</a> along with .NET Core 3.
+                <p>The next version of the C# language, C# 8, is scheduled to ship <a href="https://github.com/dotnet/core/blob/master/roadmap.md#upcoming-ship-dates">in September 2019</a> along with .NET Core 3.
 C# 8 brings some <a href="https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-8">pretty cool features</a> to the language.
 One of the features I&rsquo;m most excited about is Nullable Reference Types, which enables developers to prevent many of the problems that often come along with null values.</p>
-
 <p>C# 8 and .NET Core 3 are already in public preview, so you can give them a whirl right now.
 In this post, I&rsquo;m going to walk you through a simple example to demonstrate how to take advantage of Nullable Reference Types.</p>
-
 <p>But first, a bit of background.</p>
-
 <h5 id="value-types-and-reference-types">Value types and reference types</h5>
-
 <p>Data types in C# fall into two broad categories: value types and reference types.</p>
-
 <p>Value types are the simpler kind: integers, Booleans, characters, and so forth.
 When you create a variable of a value type, you can think of the variable as &ldquo;holding&rdquo; the value (disclaimer: this is a mental model, not a robust description of your computer&rsquo;s memory).</p>
-
 <p>For instance, the statement</p>
-
-<pre><code class="language-csharp">int x = 4;
-</code></pre>
-
-<p>creates the variable <code>x</code> of type <code>int</code> and gives it the value <code>4</code>.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">int</span> x = <span style="color:#ae81ff">4</span>;
+</code></pre></div><p>creates the variable <code>x</code> of type <code>int</code> and gives it the value <code>4</code>.
 If you were to do something to <code>x</code>, say,</p>
-
-<pre><code class="language-csharp">x++;
-</code></pre>
-
-<p>then <code>x</code> would hold the value <code>5</code> and the value <code>4</code> would be gone.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">x++;
+</code></pre></div><p>then <code>x</code> would hold the value <code>5</code> and the value <code>4</code> would be gone.</p>
 <p>Reference types are the more complicated kind: objects, strings, etc.
 When you create a variable of a reference type, the variable doesn&rsquo;t so much &ldquo;hold&rdquo; the value as &ldquo;point to&rdquo; (or &ldquo;reference&rdquo;) the value.</p>
-
 <p>For instance, the statement</p>
-
-<pre><code class="language-csharp">Person p = new Person { FirstName = &quot;Bowser&quot;, LastName = &quot;Castle&quot; };
-</code></pre>
-
-<p>creates the variable <code>p</code> of type <code>Person</code>, places the object data somewhere in memory, and gives <code>p</code> the location of that data.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Person p = <span style="color:#66d9ef">new</span> Person { FirstName = <span style="color:#e6db74">&#34;Bowser&#34;</span>, LastName = <span style="color:#e6db74">&#34;Castle&#34;</span> };
+</code></pre></div><p>creates the variable <code>p</code> of type <code>Person</code>, places the object data somewhere in memory, and gives <code>p</code> the location of that data.</p>
 <p>If you were to do something to <em>a property of</em> <code>p</code>, say,</p>
-
-<pre><code class="language-csharp">p.Age = 62;
-</code></pre>
-
-<p><code>p</code> would still hold the same value: a reference to the object.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">p.Age = <span style="color:#ae81ff">62</span>;
+</code></pre></div><p><code>p</code> would still hold the same value: a reference to the object.
 Only the object data would change.</p>
-
 <p>On the other hand, if you were to do something to <code>p</code> <em>itself</em>, say,</p>
-
-<pre><code class="language-csharp">p = new Person { FirstName = &quot;Ganon&quot;, LastName = &quot;Tower&quot; };
-</code></pre>
-
-<p>a new object would be created in memory (Ganon Tower) and <code>p</code> would be updated with the location of the new object.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">p = <span style="color:#66d9ef">new</span> Person { FirstName = <span style="color:#e6db74">&#34;Ganon&#34;</span>, LastName = <span style="color:#e6db74">&#34;Tower&#34;</span> };
+</code></pre></div><p>a new object would be created in memory (Ganon Tower) and <code>p</code> would be updated with the location of the new object.
 The old object (Bowser Castle) would be left hanging around in memory with no variable pointing to it - at least until the <del>plumber</del> garbage collector got around to cleaning it up.</p>
-
 <p>The way that reference types work - pointing to the data rather than holding the data - has a strange consequence: a reference type variable can point to nothing.</p>
-
 <h5 id="null-values">Null values</h5>
-
 <p>In C#, value types cannot be null unless you explicitly declare a variable as nullable.
 A statement like</p>
-
-<pre><code class="language-csharp">bool b = null;
-</code></pre>
-
-<p>will not compile.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">bool</span> b = <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>will not compile.
 There is no such thing as a <code>bool</code> with no value - it has to be either true or false.
 In fact, if you fail to provide a value, you&rsquo;ll get a sensible default.
 A declaration like</p>
-
-<pre><code class="language-csharp">bool b;
-</code></pre>
-
-<p>will give <code>b</code> the value <code>false</code>, which is the default for Booleans.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">bool</span> b;
+</code></pre></div><p>will give <code>b</code> the value <code>false</code>, which is the default for Booleans.</p>
 <p>Usually, this is a good thing.
 In the off chance that you want a nullable value type, you can declare it with a question mark:</p>
-
-<pre><code class="language-csharp">bool? b = null;
-</code></pre>
-
-<p>Reference types, on the other hand, are nullable right from the start.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">bool?</span> b = <span style="color:#66d9ef">null</span>;
+</code></pre></div><p>Reference types, on the other hand, are nullable right from the start.
 Let&rsquo;s make that same traditional declaration with a reference type:</p>
-
-<pre><code class="language-csharp">string s;
-</code></pre>
-
-<p>We now have a <code>string</code> type variable called <code>s</code>, but we haven&rsquo;t yet created a real <code>string</code> object in memory, so <code>s</code> points to nothing.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">string</span> s;
+</code></pre></div><p>We now have a <code>string</code> type variable called <code>s</code>, but we haven&rsquo;t yet created a real <code>string</code> object in memory, so <code>s</code> points to nothing.
 This is represented by <code>s</code> getting the value <code>null</code>.</p>
-
 <p>Oddly, even though <code>s</code> does not point to an actual string, the compiler allows you to write expressions like <code>s.Length</code>.
 This throws a <code>NullReferenceException</code> because you are attempting to dereference a null reference.
 In other words, you are trying to access a member of an object that doesn&rsquo;t exist, so your program blows up.</p>
-
 <p>All the compiler knows is that <code>s</code> is of type <code>string</code>, and objects of type <code>string</code> have a <code>Length</code> property.
 Unfortunately, in this case, we have no object, and thus no <code>Length</code> property.</p>
-
 <p>I won&rsquo;t go into why languages like C# allow null references in the first place, partly because it&rsquo;s beyond the scope of this post, but also because the lead designer of C# wrote <a href="https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/">an excellent article</a> that covers that very topic.
 I would recommend it if you&rsquo;re interested in the design rationale behind Nullable Reference Types (which we really <em>will</em> be getting to in just a moment).</p>
-
 <p>For now, all I hope to demonstrate is that we have a conundrum: reference type variables can be null, but the compiler doesn&rsquo;t have a good way to help us to deal with those nulls responsibly.
 We are human beings and sometimes we are irresponsible, so we end up with a <code>NullReferenceException</code> at runtime.</p>
-
 <h5 id="nullable-reference-types">Nullable Reference Types</h5>
-
 <p>To solve this problem, C# 8 introduces a feature called &ldquo;Nullable Reference Types&rdquo;.
 The feature has two main parts that work together: some familiar syntax you can use to declare which reference types should be nullable and some compiler warnings to help you to follow through on that intent.</p>
-
 <p>Let&rsquo;s see it in action.
 If you&rsquo;d like to paint along with us at home, here are the tools we&rsquo;ll be using (all of which are cross-platform):</p>
-
 <ul>
 <li><a href="https://dotnet.microsoft.com/download/dotnet-core/3.0">.NET Core SDK 3.0 Preview - latest</a></li>
 <li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
 <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp">The C# extension for VS Code</a></li>
 </ul>
-
 <p>To begin, we&rsquo;ll open a terminal, create an empty directory, and scaffold a new .NET Core console app:</p>
-
-<pre><code class="language-bash">mkdir nullable-sample
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir nullable-sample
 cd nullable-sample
 dotnet new console
-</code></pre>
-
-<p>There are two new files in our directory.
+</code></pre></div><p>There are two new files in our directory.
 We&rsquo;ll run <code>code .</code> to inspect them in VS Code.</p>
-
 <p>The project file is <code>nullable-sample.csproj</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Project</span> <span style="color:#a6e22e">Sdk=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk&#34;</span><span style="color:#f92672">&gt;</span>
 
-<pre><code class="language-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+  <span style="color:#f92672">&lt;PropertyGroup&gt;</span>
+    <span style="color:#f92672">&lt;OutputType&gt;</span>Exe<span style="color:#f92672">&lt;/OutputType&gt;</span>
+    <span style="color:#f92672">&lt;TargetFramework&gt;</span>netcoreapp3.0<span style="color:#f92672">&lt;/TargetFramework&gt;</span>
+    <span style="color:#f92672">&lt;RootNamespace&gt;</span>nullable_sample<span style="color:#f92672">&lt;/RootNamespace&gt;</span>
+  <span style="color:#f92672">&lt;/PropertyGroup&gt;</span>
 
-  &lt;PropertyGroup&gt;
-    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-    &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
-    &lt;RootNamespace&gt;nullable_sample&lt;/RootNamespace&gt;
-  &lt;/PropertyGroup&gt;
+<span style="color:#f92672">&lt;/Project&gt;</span>
+</code></pre></div><p>The main program is <code>Program.cs</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System;
 
-&lt;/Project&gt;
-</code></pre>
-
-<p>The main program is <code>Program.cs</code>:</p>
-
-<pre><code class="language-csharp">using System;
-
-namespace nullable_sample
+<span style="color:#66d9ef">namespace</span> nullable_sample
 {
-    class Program
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
     {
-        static void Main(string[] args)
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
         {
-            Console.WriteLine(&quot;Hello World!&quot;);
+            Console.WriteLine(<span style="color:#e6db74">&#34;Hello World!&#34;</span>);
         }
     }
 }
-</code></pre>
-
-<p>As you can see, <code>dotnet new console</code> created a simple &ldquo;hello world&rdquo; app.
+</code></pre></div><p>As you can see, <code>dotnet new console</code> created a simple &ldquo;hello world&rdquo; app.
 Let&rsquo;s build it and run it, just to get a baseline of the output we expect.</p>
-
 <p><code>dotnet build</code> compiles the code and shows us if it found any problems:</p>
-
-<pre><code class="language-text">Build succeeded.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
     0 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p><code>dotnet run</code> both compiles and runs the code, displaying the program&rsquo;s console output:</p>
-
-<pre><code class="language-text">Hello World!
-</code></pre>
-
-<p>Now that we have a running sample, let&rsquo;s add some code.</p>
-
+</code></pre></div><p><code>dotnet run</code> both compiles and runs the code, displaying the program&rsquo;s console output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello World!
+</code></pre></div><p>Now that we have a running sample, let&rsquo;s add some code.</p>
 <p>To demonstrate handling null references, we&rsquo;ll start by defining a <code>Person</code> class to represent someone&rsquo;s full name.</p>
-
-<pre><code class="language-csharp">public class Person
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
 {
-    public string FirstName { get; set; }
-    public string MiddleName { get; set; }
-    public string LastName { get; set; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> FirstName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> MiddleName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> LastName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 }
-</code></pre>
-
-<p>Many people have at least a given name and a surname, but middle names are not common in all cultures, and even where they are common, people do not always provide their middle name.
+</code></pre></div><p>Many people have at least a given name and a surname, but middle names are not common in all cultures, and even where they are common, people do not always provide their middle name.
 If we have a database of people, it might have a lot of nulls in the middle name column.
 Let&rsquo;s create a mock data access class to pretend like we&rsquo;re retrieving the first record we find in a database full of people.</p>
-
-<pre><code class="language-csharp">public class PersonStore
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonStore</span>
 {
-    public static Person GetFirstPerson()
-        =&gt; new Person { FirstName = &quot;Pat&quot;, LastName = &quot;McTest&quot; };
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Person GetFirstPerson()
+        =&gt; <span style="color:#66d9ef">new</span> Person { FirstName = <span style="color:#e6db74">&#34;Pat&#34;</span>, LastName = <span style="color:#e6db74">&#34;McTest&#34;</span> };
 }
-</code></pre>
-
-<p>Now we can use this data access code in our main program to do something interesting with a <code>Person</code> object, like counting the number of characters in the person&rsquo;s full name and displaying it to the console.</p>
-
-<pre><code class="language-csharp">static void Main(string[] args)
+</code></pre></div><p>Now we can use this data access code in our main program to do something interesting with a <code>Person</code> object, like counting the number of characters in the person&rsquo;s full name and displaying it to the console.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
 {
     Person p = PersonStore.GetFirstPerson();
 
-    int letterCount =
+    <span style="color:#66d9ef">int</span> letterCount =
         p.FirstName.Length +
         p.MiddleName.Length +
         p.LastName.Length;
 
-    Console.WriteLine($&quot;Hello, {p.FirstName}&quot;);
-    Console.WriteLine($&quot;You have {letterCount} letters in your full name&quot;);
+    Console.WriteLine(<span style="color:#e6db74">$&#34;Hello, {p.FirstName}&#34;</span>);
+    Console.WriteLine(<span style="color:#e6db74">$&#34;You have {letterCount} letters in your full name&#34;</span>);
 }
-</code></pre>
-
-<p>That seems easy enough.
+</code></pre></div><p>That seems easy enough.
 However, there is a sneaky bug lurking in this code.
 Before we address it, let&rsquo;s see how our program behaves.</p>
-
 <p>The code compiles without issue.
 The output of <code>dotnet build</code> is no different than before:</p>
-
-<pre><code class="language-text">Build succeeded.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
     0 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p>When we run the code, however, we encounter a problem.
+</code></pre></div><p>When we run the code, however, we encounter a problem.
 Here is the output of <code>dotnet run</code>:</p>
-
-<pre><code class="language-text">Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
-</code></pre>
-
-<p>The problem here is that we neglected to check for null before accessing the <code>Length</code> property of <code>p.MiddleName</code>.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object.
+</code></pre></div><p>The problem here is that we neglected to check for null before accessing the <code>Length</code> property of <code>p.MiddleName</code>.
 Our mock person record lacks a middle name, so at runtime, <code>p.MiddlName</code> was null.
 Let&rsquo;s sweep this bug under the rug by giving Pat a middle initial.
 I&rsquo;m feeling lazy today and I need to ship this code.</p>
-
-<pre><code class="language-csharp">public static Person GetFirstPerson()
-    =&gt; new Person { FirstName = &quot;Pat&quot;, MiddleName = &quot;Q&quot;, LastName = &quot;McTest&quot; };
-</code></pre>
-
-<p>If we run the code, it works! Hooray!</p>
-
-<pre><code class="language-text">Hello, Pat
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Person GetFirstPerson()
+    =&gt; <span style="color:#66d9ef">new</span> Person { FirstName = <span style="color:#e6db74">&#34;Pat&#34;</span>, MiddleName = <span style="color:#e6db74">&#34;Q&#34;</span>, LastName = <span style="color:#e6db74">&#34;McTest&#34;</span> };
+</code></pre></div><p>If we run the code, it works! Hooray!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello, Pat
 You have 10 letters in your full name
-</code></pre>
-
-<p>Unfortunately, we now have a more insidious problem.
+</code></pre></div><p>Unfortunately, we now have a more insidious problem.
 Our code works fine with our test data, but what will happen when we load a record from a real database and the middle name is missing?</p>
-
 <p>We could uncover the bug by adding more tests - and indeed, we absolutely should - but wouldn&rsquo;t it be great if the compiler could help us fix it right now?</p>
-
 <p>Let&rsquo;s enable the Nullable Reference Types feature.
 To do this, we have to add two lines to our project file: one to specify that we&rsquo;re using C# 8 and one to turn on the feature.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;LangVersion&gt;</span>8.0<span style="color:#f92672">&lt;/LangVersion&gt;</span>
+<span style="color:#f92672">&lt;NullableContextOptions&gt;</span>enable<span style="color:#f92672">&lt;/NullableContextOptions&gt;</span>
+</code></pre></div><p>Just to see that in context, here is our modified <code>nullable-sample.csproj</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Project</span> <span style="color:#a6e22e">Sdk=</span><span style="color:#e6db74">&#34;Microsoft.NET.Sdk&#34;</span><span style="color:#f92672">&gt;</span>
 
-<pre><code class="language-xml">&lt;LangVersion&gt;8.0&lt;/LangVersion&gt;
-&lt;NullableContextOptions&gt;enable&lt;/NullableContextOptions&gt;
-</code></pre>
+  <span style="color:#f92672">&lt;PropertyGroup&gt;</span>
+    <span style="color:#f92672">&lt;OutputType&gt;</span>Exe<span style="color:#f92672">&lt;/OutputType&gt;</span>
+    <span style="color:#f92672">&lt;TargetFramework&gt;</span>netcoreapp3.0<span style="color:#f92672">&lt;/TargetFramework&gt;</span>
+    <span style="color:#f92672">&lt;RootNamespace&gt;</span>nullable_sample<span style="color:#f92672">&lt;/RootNamespace&gt;</span>
+    <span style="color:#f92672">&lt;LangVersion&gt;</span>8.0<span style="color:#f92672">&lt;/LangVersion&gt;</span>
+    <span style="color:#f92672">&lt;NullableContextOptions&gt;</span>enable<span style="color:#f92672">&lt;/NullableContextOptions&gt;</span>
+  <span style="color:#f92672">&lt;/PropertyGroup&gt;</span>
 
-<p>Just to see that in context, here is our modified <code>nullable-sample.csproj</code> file:</p>
+<span style="color:#f92672">&lt;/Project&gt;</span>
+</code></pre></div><p>With the feature enabled, let&rsquo;s try to compile our code again. Here is the output of <code>dotnet build</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
 
-<pre><code class="language-xml">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
-
-  &lt;PropertyGroup&gt;
-    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
-    &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
-    &lt;RootNamespace&gt;nullable_sample&lt;/RootNamespace&gt;
-    &lt;LangVersion&gt;8.0&lt;/LangVersion&gt;
-    &lt;NullableContextOptions&gt;enable&lt;/NullableContextOptions&gt;
-  &lt;/PropertyGroup&gt;
-
-&lt;/Project&gt;
-</code></pre>
-
-<p>With the feature enabled, let&rsquo;s try to compile our code again. Here is the output of <code>dotnet build</code>:</p>
-
-<pre><code class="language-text">Build succeeded.
-
-Program.cs(23,23): warning CS8618: Non-nullable property 'FirstName' is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
-Program.cs(24,23): warning CS8618: Non-nullable property 'MiddleName' is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
-Program.cs(25,23): warning CS8618: Non-nullable property 'LastName' is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
+Program.cs(23,23): warning CS8618: Non-nullable property &#39;FirstName&#39; is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
+Program.cs(24,23): warning CS8618: Non-nullable property &#39;MiddleName&#39; is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
+Program.cs(25,23): warning CS8618: Non-nullable property &#39;LastName&#39; is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
     3 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p>The build succeeded, just as before, but now we have some warnings. Progress!</p>
-
+</code></pre></div><p>The build succeeded, just as before, but now we have some warnings. Progress!</p>
 <p>The compiler is telling us two things:</p>
-
 <ul>
 <li>The properties of our <code>Person</code> class are all considered &ldquo;non-nullable&rdquo;</li>
 <li>Given that they&rsquo;re non-nullable, they should be initialized</li>
 </ul>
-
 <p>Wait a minute.
 All three properties of <code>Person</code> are strings.
 Strings are nullable, right?</p>
-
 <p>Yes, it is just as possible as ever to assign <code>null</code> to a string.
 The warnings we received are speaking about our <em>intent</em>.
 When the Nullable Reference Types feature is enabled, the compiler considers reference types to be non-nullable by default, just like value types.
 If you want a property to be nullable, you have to declare it that way.</p>
-
 <p>Let&rsquo;s say that our application requires each person to have a first and last name but makes the middle name optional.
 This means that <code>FirstName</code> and <code>LastName</code> should be initialized to ensure they always have a value.
 The empty string would be a sensible default.</p>
-
-<pre><code class="language-csharp">public class Person
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
 {
-    public string FirstName { get; set; } = string.Empty;
-    public string MiddleName { get; set; }
-    public string LastName { get; set; } = string.Empty;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> FirstName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">string</span>.Empty;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> MiddleName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> LastName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; } = <span style="color:#66d9ef">string</span>.Empty;
 }
-</code></pre>
+</code></pre></div><p><code>dotnet build</code> now generates only one warning:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
 
-<p><code>dotnet build</code> now generates only one warning:</p>
-
-<pre><code class="language-text">Build succeeded.
-
-Program.cs(24,23): warning CS8618: Non-nullable property 'MiddleName' is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
+Program.cs(24,23): warning CS8618: Non-nullable property &#39;MiddleName&#39; is uninitialized. [/home/ed/source/nullable-sample/nullable-sample.csproj]
     1 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p>Because <code>MiddleName</code> is optional in our application, instead of initializing it, we&rsquo;ll mark it as nullable.
+</code></pre></div><p>Because <code>MiddleName</code> is optional in our application, instead of initializing it, we&rsquo;ll mark it as nullable.
 We do this by appending a question mark to the type, which is the same syntax we used earlier to make a value type nullable.</p>
-
-<pre><code class="language-csharp">public string? MiddleName { get; set; }
-</code></pre>
-
-<p>Now we have a more expressive domain model.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> MiddleName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</code></pre></div><p>Now we have a more expressive domain model.
 <code>FirstName</code> and <code>LastName</code> are required, so we initialize them.
 <code>MiddleName</code> is optional, so we mark it as nullable.
 The code looks better already.</p>
-
 <p>Let&rsquo;s see how it compiles.</p>
-
-<pre><code class="language-text">Build succeeded.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
 
 Program.cs(13,17): warning CS8602: Dereference of a possibly null reference. [/home/ed/source/nullable-sample/nullable-sample.csproj]
     1 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p>Now we have a new warning.
+</code></pre></div><p>Now we have a new warning.
 &ldquo;Dereference of a possibly null reference&rdquo; means that we are accessing a member of an object that might be null, and we haven&rsquo;t responsibly checked to make sure it isn&rsquo;t null.
 Evidently, the culprit is on line 13.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Person p = PersonStore.GetFirstPerson();
 
-<pre><code class="language-csharp">Person p = PersonStore.GetFirstPerson();
-
-int letterCount =
+<span style="color:#66d9ef">int</span> letterCount =
     p.FirstName.Length +
     p.MiddleName.Length +
     p.LastName.Length;
-</code></pre>
-
-<p>Line 13 contains <code>p.MiddleName.Length</code>.
+</code></pre></div><p>Line 13 contains <code>p.MiddleName.Length</code>.
 This was the line that generated the <code>NullReferenceException</code> earlier, but now we&rsquo;re getting a helpful warning about it.
 Because we marked <code>MiddleName</code> as nullable, we have to check to make sure it isn&rsquo;t null before accessing any of its members, in this case its <code>Length</code> property.</p>
-
 <p>Let&rsquo;s add a null check (which we really should have done from the very beginning, had we not been in such a hurry).</p>
-
-<pre><code class="language-csharp">int letterCount =
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">int</span> letterCount =
     p.FirstName.Length +
-    (p.MiddleName?.Length ?? 0) +
+    (p.MiddleName?.Length ?? <span style="color:#ae81ff">0</span>) +
     p.LastName.Length;
-</code></pre>
-
-<p>Now our code builds without warnings:</p>
-
-<pre><code class="language-text">Build succeeded.
+</code></pre></div><p>Now our code builds without warnings:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Build succeeded.
     0 Warning(s)
     0 Error(s)
-</code></pre>
-
-<p>The warning went away because the compiler is capable of analyzing the control flow of a program and determining where null values may occur.
+</code></pre></div><p>The warning went away because the compiler is capable of analyzing the control flow of a program and determining where null values may occur.
 By checking to make sure that <code>p.MiddleName</code> was non-null before accessing its <code>Length</code> property, we soothed the compiler&rsquo;s fears.</p>
-
 <p>Our program runs successfully:</p>
-
-<pre><code class="language-text">Hello, Pat
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello, Pat
 You have 10 letters in your full name
-</code></pre>
-
-<p>But is the bug really fixed?
+</code></pre></div><p>But is the bug really fixed?
 Recall that earlier, we added a middle name to our test person in order to prevent a <code>NullReferenceException</code>.
 Let&rsquo;s remove that test middle name and find out if our code has actually improved.</p>
-
-<pre><code class="language-csharp">public static Person GetFirstPerson()
-    =&gt; new Person { FirstName = &quot;Pat&quot;, LastName = &quot;McTest&quot; };
-</code></pre>
-
-<p>The moment of truth. <code>dotnet run</code>:</p>
-
-<pre><code class="language-text">Hello, Pat
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Person GetFirstPerson()
+    =&gt; <span style="color:#66d9ef">new</span> Person { FirstName = <span style="color:#e6db74">&#34;Pat&#34;</span>, LastName = <span style="color:#e6db74">&#34;McTest&#34;</span> };
+</code></pre></div><p>The moment of truth. <code>dotnet run</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Hello, Pat
 You have 9 letters in your full name
-</code></pre>
-
-<p>Success!
+</code></pre></div><p>Success!
 Even with a null value in our test data, our program ran safely.</p>
-
 <p>Note that we converted our buggy code to null-safe code simply by following the indications provided to us by the compiler.
 This is the real value of the Nullable Reference Types feature: it helps you write safer and more expressive code.</p>
-
 <h5 id="recap">Recap</h5>
-
 <p>You can try out C# 8 with Nullable Reference Types right now.
 However, keep in mind that .NET Core 3 still in preview as of the time of writing, so you might not want to use it for production code until the first stable release.</p>
-
 <p>First, <a href="https://dotnet.microsoft.com/download/dotnet-core/3.0">download the latest preview release of .NET Core 3</a>.</p>
-
 <p>Second, specify .NET Core 3, C# 8, and the &ldquo;nullable context options&rdquo; properties in your <code>.csproj</code> file:</p>
-
-<pre><code class="language-xml">&lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
-&lt;LangVersion&gt;8.0&lt;/LangVersion&gt;
-&lt;NullableContextOptions&gt;enable&lt;/NullableContextOptions&gt;
-</code></pre>
-
-<p>Third, explicitly indicate that a reference type should be allowed to carry null values by appending a question mark to the type:</p>
-
-<pre><code class="language-csharp">public string? MiddleName { get; set; }
-</code></pre>
-
-<p>And finally, pay attention to the warnings you get from <code>dotnet build</code> and use them as a guide to improving your code.</p>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;TargetFramework&gt;</span>netcoreapp3.0<span style="color:#f92672">&lt;/TargetFramework&gt;</span>
+<span style="color:#f92672">&lt;LangVersion&gt;</span>8.0<span style="color:#f92672">&lt;/LangVersion&gt;</span>
+<span style="color:#f92672">&lt;NullableContextOptions&gt;</span>enable<span style="color:#f92672">&lt;/NullableContextOptions&gt;</span>
+</code></pre></div><p>Third, explicitly indicate that a reference type should be allowed to carry null values by appending a question mark to the type:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string?</span> MiddleName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</code></pre></div><p>And finally, pay attention to the warnings you get from <code>dotnet build</code> and use them as a guide to improving your code.</p>
 <p>If you&rsquo;d like to see the full example app we walked through in this post, it&rsquo;s available <a href="https://github.com/ehdevries/learning-nullable-reference-types">on GitHub</a>.</p>
-
 <h5 id="going-further">Going further</h5>
-
 <p>By design, the Nullable Reference Types feature generates warnings, not errors.
 This is so that you can start fixing problems in existing code without spilling noisy red ink all over the place.</p>
-
 <p>If you do want actual errors that fail the build, you can choose to treat all warnings as errors.
 This is an existing feature in current versions of .NET (not just in .NET Core 3), and it can be enabled by adding one more property to a <code>PropertyGroup</code> in your <code>.csproj</code> file:</p>
-
-<pre><code class="language-xml">&lt;TreatWarningsAsErrors&gt;true&lt;/TreatWarningsAsErrors&gt;
-</code></pre>
-
-<p>We covered the basics of Nullable Reference Types in this post, but there is even more to the feature.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;TreatWarningsAsErrors&gt;</span>true<span style="color:#f92672">&lt;/TreatWarningsAsErrors&gt;</span>
+</code></pre></div><p>We covered the basics of Nullable Reference Types in this post, but there is even more to the feature.
 If you&rsquo;d like to dig deeper, check out these articles:</p>
-
 <ul>
 <li><em><a href="https://devblogs.microsoft.com/dotnet/nullable-reference-types-in-csharp/">Introducing Nullable Reference Types in C#</a></em> by Mads Torgerson</li>
 <li>Microsoft&rsquo;s <a href="https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references">official guide</a> to Nullable Reference Types</li>

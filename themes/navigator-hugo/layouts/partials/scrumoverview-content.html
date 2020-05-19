@@ -1,0 +1,141 @@
+{{ if .Site.Data.about.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<!-- image fixes -->
+<style>
+ @media only screen and (min-width: 767px) {
+				.center-image-hv {
+					position: absolute;
+					margin-top: auto;
+					margin-bottom: auto;
+					top: 0;
+					bottom: 0;
+					left: 50%;
+					transform: translateX(-50%);
+					max-width: 90%;
+				}
+				.container .row {
+					padding-top: 50px !important;
+				}
+				.container .row:not(:last-of-type){
+					padding-bottom: 25px;
+				}
+}
+.container .row {
+	padding-top: 25px;
+}
+a.register {
+	border: none;
+	padding: 15px 50px;
+	margin: 0;
+	background: #4ba6dd;
+	color: #fff;
+	border-radius: 0;
+	cursor: pointer;
+}
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: 5px;
+  padding-left: 5px;
+  margin: 10px 0;
+}
+ul.dashed > li:before {
+  content: "-";
+  margin-right: 5px;
+  text-indent: 5px;
+}
+</style>
+<section class="cspo section-sm" id="about-cspo">
+    <div class="container">
+        {{ with .Site.Data.scrumoverview.about }}
+            {{ if .positionRight }}
+                <div class="row justify-content-center row-eq-height">
+                    <div class="col-md-5 col-md-5 offset-md-1 col-sm-12">
+                        <div class="content">
+                            <h2>{{ .title }}</h2>
+                            <p>
+                                {{ .description }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 col-sm-12 text-center">
+                        <img src="/{{ .image }}" class="img-fluid rounded center-image-hv" alt="about-image">
+                    </div>
+                </div>
+            {{ else }}
+                <div class="row mb-50 justify-content-center">
+                    <div class="col-md-5 col-sm-12 text-center">
+                        <img src="/{{ .image }}" class="img-fluid rounded center-image-hv" alt="about-image">
+                    </div>
+                    <div class="col-md-5 col-sm-12">
+                        <div class="content">
+                            <h2>{{ .title }}</h2>
+                            <p>
+                                {{ .description }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        {{ end }}
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-12 col-md-5 col-sm-12 d-none d-md-block text-center offset-md-1">
+				<img src="/images/blog/golocal.jpg" class="img-fluid center-image-hv rounded shadow" alt="about-image">
+			</div>
+			<div class="col-md-5 col-md-5 col-sm-12 ">
+				<div class="content">
+					<h2>Important Info</h2>
+					<h6>Dates</h6>
+					<p>June 8-9, 2020</p>
+					<h6>Location</h6>
+					<p>Virtual Instructor Led Training</p>
+					<h6>Cost</h6>
+					<p>$895.00 (Early Bird until May 25, 2020), $995.00 (Late Bird May 25 - June 1, 2020) $999.00 (Regular June 1 - June 5, 2020)</p>
+					<p>NOTE: The possibility of state grant funding is available to participants. However, participant's employers must pay for the training on behalf of the participants in order to qualify. For partial course fee reimbursement options, please contact West Michigan Works! at: business@westmiworks.org.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-md-5 col-md-5 col-sm-12 offset-md-1">
+				<div class="content">
+					<h2>Included In Course</h2>
+					<ul class="dashed">
+						<li>Attendee workbook</li>
+						<li>Two-year membership with Scrum Alliance</li>
+						<li>Course certificate of completion</li>
+						<li>14-16 PDUS, and correspondingly 14-16 SEUs (Varies according to the CST)</li>
+					</ul>
+					<p>NOTE: Attendees must attend both days of the course in order to qualify for the certification.</p>
+				</div>
+			</div>
+			<div class="col-12 col-md-5 col-sm-12  text-center">
+				<img src="/images/blog/responsive.jpg" class="img-fluid d-none d-md-block center-image-hv rounded shadow" alt="about-image">
+			</div>
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+            <div class="col-12 col-md-5 col-sm-12  text-center">
+				<img src="/images/cspo/RickWaters_Headshot.jpg" class="img-fluid d-none d-md-block center-image-hv rounded" alt="about-image">
+			</div>
+            <div class="col-md-5 col-md-5 col-sm-12 offset-md-1">
+				<div class="content">
+					<h2>About the Instructor</h2>
+					<p>Rick Waters (Certified Scrum Trainer) is a veteran of the US Military. He has an in-depth background in customer service, and software development. Rick’s strengths are focused on Scrum, enterprise Scrum, business agility and Kanban. He has contributed to the success of some of the largest Agile transformations in the Chicagoland area, since 2013. His dedication to service is underscored by his volunteer involvement in educating youths, and helping veterans re-enter the civilian workforce in national non-profit organizations.</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="row  justify-content-center row-eq-height">
+			<div class="col-sm-10 off-set-sm-1 text-center justify-center"> 
+				<a class="register" target="_blank" href="https://www.eventbrite.com/e/virtual-certified-scrum-product-owner-cspo-training-tickets-104996066060">Register Now!</a>
+			</div>
+		</div>
+  </div>
+		
+</section>
+
+{{"<!-- About section End -->" | safeHTML}}
+{{ end }}
