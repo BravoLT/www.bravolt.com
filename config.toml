@@ -143,3 +143,9 @@ theme = "navigator-hugo"
         github= "https://github.com/bravolt"
 
         # hrefTargetBlank = true
+        #
+[deployment]
+[[deployment.targets]]
+name = "s3"
+URL = "s3://www.bravolt.com?region=us-east-1"
+cloudFrontDistributionID = "E24ZOIJF79BO2Z"
