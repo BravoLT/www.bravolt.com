@@ -1,27 +1,33 @@
-enable  : true
-item    :
-  - title : Go Team Bravo! # "-" is the list member. for this item, because we dont want to make many similar items on the page
-    description : >
+enable: true
+item:
+  - title: Go Team Bravo! # "-" is the list member. for this item, because we dont want to make many similar items on the page
+    description: >
       Bravo LT needs you to be a part of our highly motivated group of technology experts. We share a passion for technology and the community we serve, and we are committed to building long-lasting, productive relationships. We focus on giving back to the community, positively impacting society, and providing quality solutions that work. We believe in autonomy, mastery purpose and trusting people to do the right thing — and we think Bravo LT is a pretty great place to be a part of.
-    icon  : tf-ion-monitor
-    sideTitle : Open Positions
-    image : /images/careers/careers-page-image.jpg
-    list  :
+    icon: tf-ion-monitor
+    sideTitle: Open Positions
+    image: /images/careers/careers-page-image.jpg
+    list:
+      - name: Agile Business Analyst - Team Lead
+        linkToImage: ../images/jobdescriptions/6-agile-ba-team-lead.pdf
+      - name: Informatica ETL Engineer
+        linkToImage: ../images/jobdescriptions/14-informatica-etl-engineer.pdf
+      - name: Oracle APEX Engineer
+        linkToImage: ../images/jobdescriptions/21-oracle-apex-engineer.pdf
+      - name: Scrum Master
+        linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
+      - name: Senior Software Developer - Front End
+        linkToImage: ../images/jobdescriptions/24-senior-front-end-developer.pdf
+      - name: Senior Software Developer - GoLang
+        linkToImage: ../images/jobdescriptions/22-senior-developer-golang.pdf
+      - name: Senior Software Developer - Java
+        linkToImage: ../images/jobdescriptions/20-senior-java-developer.pdf
+      - name: Software Developer - Front End
+        linkToImage: ../images/jobdescriptions/23-front-end-developer.pdf
+      - name: Software Developer - Java
+        linkToImage: ../images/jobdescriptions/18-java-developer.pdf
+      - name: Software Engineer - IoT
+        linkToImage: ../images/jobdescriptions/19-software-engineer-iot.pdf
       - name: Software Developer - .NET
         linkToImage: ../images/jobdescriptions/17-dot-net-developer.pdf
-      - name : Software Developer - Java 
-        linkToImage: ../images/jobdescriptions/18-java-developer.pdf
-      - name : Senior Software Developer - Java
-        linkToImage: ../images/jobdescriptions/20-senior-java-developer.pdf
-      - name : Software Engineer - IoT
-        linkToImage: ../images/jobdescriptions/19-software-engineer-iot.pdf    
-      - name : Scrum Master
-        linkToImage: ../images/jobdescriptions/5-scrum-master.pdf
-      - name : Agile Business Analyst - Team Lead
-        linkToImage: ../images/jobdescriptions/6-agile-ba-team-lead.pdf
-      - name : Quality Assurance (QA) Analyst
+      - name: Quality Assurance (QA) Analyst
         linkToImage: ../images/jobdescriptions/8-quality-assurance-qa-analyst.pdf
-      - name : Informatica ETL Engineer
-        linkToImage: ../images/jobdescriptions/14-informatica-etl-engineer.pdf
-      - name : Oracle APEX Engineer
-        linkToImage: ../images/jobdescriptions/21-oracle-apex-engineer.pdf
